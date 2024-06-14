@@ -1,0 +1,81 @@
+<header class="header">
+    <nav class="main-nav" id="main_nav">
+        <h1 class="logo">
+            <span>JS</span> Cheat Sheets
+        </h1>
+        <ul>
+            <li>
+                <a href="first_semester.html" class="active">1. semester</a>
+            </li>
+            <li>
+                <a href="second_semester.html">2. semester</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<style>
+    header
+    {
+        /* background-color: #fff;
+        color: #000; */
+        height: 80px;
+        width: 100%;
+    }
+
+    header h1
+    {
+        font-size: 30px;
+        color: var(--primary-heading-color);
+    }
+
+    header h1 span
+    {
+        color: var(--secondary-heading-color);
+    }
+
+    header nav
+    {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        padding: 30px;
+    }
+
+    header nav ul
+    {
+        display: flex;
+        gap: 20px;
+    }
+
+    header nav ul li a
+    {
+        position: relative;
+        font-family: 'Noto Sans', sans-serif;
+        font-size: 20px;
+        color: var(--nav-links-color);
+    }
+
+    header nav ul li a::before
+    {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        width: 0;
+        border-bottom: 2px solid var(--links-hover-border-color);
+        transition: width .2s ease-in;
+    }
+
+    header nav ul li a:not(.active):hover::before
+    {
+        width: 100%;
+        transition: width .2s ease-in;
+    }
+
+    header nav ul li a.active
+    {
+        border-bottom: 2px solid var(--links-hover-border-color);
+    }
+
+</style>

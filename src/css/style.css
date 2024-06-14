@@ -18,6 +18,9 @@
     --primary-heading-color: #fff;
     --secondary-heading-color: #ff0;
     --paragraph-color: #fff;
+    --nav-links-color: #fff;
+    --links-hover-border-color: #ff0;
+    --link-active-color: #ff0;
 
     /* Radii */
     --base-border-radius: 10px;
