@@ -1,0 +1,44 @@
+---
+const {className, id, buttonText, iconClass} = Astro.props
+---
+
+<button class={className} id={id}>
+    {buttonText} <i class="fas fa-download"></i>
+</button>
+
+
+<style>
+    button
+    {
+        display: inline-block;
+        font-family: 'Noto Sans', sans-serif;
+        margin-top: 30px;
+        background-color: var(--button-background-color);
+        padding: 10px 15px;
+        border-radius: calc(var(--base-border-radius) * 50);
+        text-transform: uppercase;
+        width: fit-content;
+        font-size: 20px;
+        transition: opacity .15s ease-in;
+        cursor: pointer;
+        box-shadow: var(--box-shadow);
+    }
+
+    button i
+    {
+        margin-left: 20px;
+    }
+
+    button:hover
+    {
+        opacity: .9;
+        transition: opacity .15s ease-in;
+    }
+
+    button:active
+    {
+        transform: scale(.98);
+        box-shadow: none;
+        transition: none;
+    }
+</style>
