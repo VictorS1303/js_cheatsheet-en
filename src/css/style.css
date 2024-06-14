@@ -15,7 +15,8 @@
 {
     /* Colors */
     --body-background-color: #030320;
-    --heading-color: #ff0;
+    --primary-heading-color: #fff;
+    --secondary-heading-color: #ff0;
     --paragraph-color: #fff;
 
     /* Radii */
@@ -45,7 +46,7 @@ a
 h1, h2, h3, h4, h5, h6
 {
     font-family: 'Oswald', sans-serif;
-    color: var(--heading-color);
+    color: var(--primary-heading-color);
 }
 
 p
