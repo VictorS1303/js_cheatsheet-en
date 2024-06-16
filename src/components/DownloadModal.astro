@@ -37,6 +37,8 @@ import DownloadButton from './ModalOpenButton.astro'
     .container.download-modal-container div img
     {
         height: 140px;
+        border-radius: calc(var(--base-border-radius) / 1.5);
+        margin-bottom: 5px;
     }
 
     @media screen and (min-width: 768px)
@@ -51,8 +53,7 @@ import DownloadButton from './ModalOpenButton.astro'
         .container.download-modal-container div img
         {
             height: 250px;
-            border-radius: calc(var(--base-border-radius) / 1.5);
-            margin-bottom: 15px;
+     
         }
     }
 </style>
