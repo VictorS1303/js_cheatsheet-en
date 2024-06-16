@@ -7,8 +7,8 @@ import Button from './Button.astro'
 <section class="hero" id="hero">
     <HeroHeading/>
     <HeroParagraph/>
-    <Button className="download-btn" id="download_btn" buttonText="Code Examples">
-        <i class="fas fa-download"></i>
+    <Button className="download-btn" id="download_btn">
+        Code Examples <i class="fas fa-download"></i>
     </Button>
 </section>
 
@@ -21,5 +21,10 @@ import Button from './Button.astro'
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
+    }
+
+    i.fas.fa-download
+    {
+        margin-left: 10px;
     }
 </style>

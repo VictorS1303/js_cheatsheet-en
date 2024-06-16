@@ -3,7 +3,7 @@ const {className, id, buttonText, iconClass} = Astro.props
 ---
 
 <button class={className} id={id}>
-    {buttonText} <i class="fas fa-download"></i>
+    <slot/>
 </button>
 
 
@@ -26,7 +26,7 @@ const {className, id, buttonText, iconClass} = Astro.props
 
     button i
     {
-        margin-left: 20px;
+        margin-left: 50px;
     }
 
     button:hover
