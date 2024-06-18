@@ -1,0 +1,44 @@
+<div class="container topic-cards-container">
+   <slot/>
+</div>
+
+<style>
+    .container
+    {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: grid;
+        justify-content: center;
+        gap: 25px;
+        padding: 16px;
+        height: 600px;
+        overflow-y: scroll;
+    }
+
+    .container div
+    {
+        background: #f0f0f0;
+        height: 200px;
+        width: 300px;
+        border: 1px solid #ccc;
+        padding: 16px;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .container div:not(:last-child)
+    {
+        margin-bottom: 50px;
+    }
+
+    @media (min-width: 768px)
+    {
+        .container
+        {
+            grid-template-columns: repeat(3, 1fr);
+            height: auto;
+            overflow: hidden;
+        }
+    }
+</style>
