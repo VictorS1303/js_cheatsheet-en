@@ -22,10 +22,10 @@
         position: absolute;
         top: 20px;
         right: 20px;
-        font-size: 20px;
+        font-size: 30px;
         color: #fff;
         cursor: pointer;
-        transition: color .15s ease-in, right .5s ease-in;
+        transition: right .5s ease-in, color .15s ease-in;
     }
 
     .menu-toggle-btn:hover
@@ -135,20 +135,20 @@
 
         header
         {
-          
-            position: relative;
-            left: 0;
             height: 80px;
             width: 100vw;
+            left: 0;
             background-color: transparent;
         }
 
         header nav
         {
             display: flex;
-            justify-content: space-between;
+            justify-content: space-around;
+            align-items: center;
+            text-align: center;
+            height: 100%;
             width: 100%;
-            padding: 20px;
         }
 
         header nav h1
@@ -159,20 +159,20 @@
 
         header nav ul
         {
-            position: relative;
-            top: 50%;
-            left: 90%;
-            transform: translateX(-50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
         }
-        
+
         header nav ul li
         {
             display: inline-block;
         }
 
-        header nav ul li:not(:last-child)
+        header nav ul > li:not(:last-child)
         {
-            margin-right: 20px;
+            margin-bottom: 0;
         }
     }
    
@@ -189,5 +189,21 @@
     {
         menuToggleBtn.classList.toggle('active')
         header.classList.toggle('active')
+
+        updateMobileToggleMenuButtonIcon()
+    }
+
+    function updateMobileToggleMenuButtonIcon()
+    {
+        if(menuToggleBtn.classList.contains('fa-bars'))
+        {
+            menuToggleBtn.classList.remove('fa-bars')
+            menuToggleBtn.classList.add('fa-times')
+        }
+        else
+        {
+            menuToggleBtn.classList.add('fa-bars')
+            menuToggleBtn.classList.remove('fa-times')
+        }
     }
 </script>
