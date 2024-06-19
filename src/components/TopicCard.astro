@@ -1,0 +1,79 @@
+<div class="container card-container">
+    <a href="#">
+        <div class="card topic-card">
+            <div class="inner-card">
+                <div class="front-card">
+                    <h2>Functions</h2>
+                </div>
+                <div class="back-card">
+                    <h2>function functionName()</h2>
+                </div>
+            </div>
+        </div>
+    </a>
+    <h4>1. Functions</h4>
+</div>
+
+<style>
+    .container.card-container h4
+    {
+        font-family: 'Roboto', sans-serif;
+        margin-top: 10px;
+        font-size: 18px;
+    }
+
+    .topic-card
+    {
+        width: 300px;
+        height: 200px;
+        perspective: 1000px;
+        cursor: pointer;
+    }
+
+    /* This container is needed to position the front and back side */
+    .inner-card
+    {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.8s .4s;
+        transform-style: preserve-3d;
+    }
+
+    .topic-card:hover .inner-card
+    {
+        transform: rotateY(-180deg);
+    }
+
+    .topic-card:hover .front-card h2
+    {
+        color: #ff0;
+        transition: .3s ease-in;
+    }
+
+    .topic-card:not(:hover) > *
+    {
+        transition-delay: 0;
+    }
+
+    .front-card, .back-card
+    {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        background-color: var(--topic-card-background-color);
+        border-radius: calc(var(--base-border-radius) / 1.5);
+        -webkit-backface-visibility: hidden; /* Safari */
+        backface-visibility: hidden;
+    }
+
+    .back-card
+    {
+        transform: rotateY(180deg);
+    }
+</style>
