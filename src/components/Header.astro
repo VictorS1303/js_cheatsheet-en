@@ -1,0 +1,99 @@
+---
+import Navbar from './Navbar.astro'
+---
+
+<i class="fas fa-bars btn menu-toggle-btn" id="menu_toggle_btn"></i>
+
+<header class="header">
+    <slot/>
+</header>
+
+<style>
+    .menu-toggle-btn
+    {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 30px;
+        color: #fff;
+        cursor: pointer;
+        transition: right .5s ease-in, color .15s ease-in;
+    }
+
+    .menu-toggle-btn:hover
+    {
+        color: #ff0;
+        transition: color .15s ease-in;
+    }
+
+    .menu-toggle-btn.active
+    {
+        right: 220px;
+        transition: right .5s ease-in;
+    }
+
+    header
+    {
+        position: absolute;
+        right: -200px;
+        height: 100vh;
+        width: 200px;
+        transition: right .5s ease-in;
+        background-color: var(--mobile-header-background-color);
+    }
+
+    header.active
+    {
+        right: 0;
+        transition: right .5s ease-in;
+    }
+
+
+
+    @media screen and (min-width: 768px)
+    {
+        i
+        {
+            display: none;
+        }
+
+        header
+        {
+            height: 80px;
+            width: 100vw;
+            left: 0;
+            background-color: transparent;
+        }
+    }
+   
+</style>
+
+<script>
+    const menuToggleBtn = document.querySelector('#menu_toggle_btn')
+    const header = document.querySelector('header')
+
+
+    menuToggleBtn.addEventListener('click', toggleMenu)
+
+    function toggleMenu()
+    {
+        menuToggleBtn.classList.toggle('active')
+        header.classList.toggle('active')
+
+        updateMobileToggleMenuButtonIcon()
+    }
+
+    function updateMobileToggleMenuButtonIcon()
+    {
+        if(menuToggleBtn.classList.contains('fa-bars'))
+        {
+            menuToggleBtn.classList.remove('fa-bars')
+            menuToggleBtn.classList.add('fa-times')
+        }
+        else
+        {
+            menuToggleBtn.classList.add('fa-bars')
+            menuToggleBtn.classList.remove('fa-times')
+        }
+    }
+</script>

@@ -1,0 +1,119 @@
+<nav class="main-nav" id="main_nav">
+    <h1 class="logo">
+        <span>JS</span> Cheat Sheets
+    </h1>
+    <ul>
+        <li>
+            <a href="first_semester.html" class="active">1. semester</a>
+        </li>
+        <li>
+            <a href="second_semester.html">2. semester</a>
+        </li>
+    </ul>
+</nav>
+
+<style>
+    nav
+    {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        padding: 30px;
+    }
+
+    h1
+    {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        white-space: nowrap;
+        font-size: 30px;
+        color: var(--primary-heading-color);
+        font-size: 20px;
+    }
+
+    h1 span
+    {
+        color: var(--secondary-heading-color);
+    }
+
+    nav ul
+    {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    nav ul > li:not(:last-child)
+    {
+        margin-bottom: 25px;
+    }
+
+    nav ul li a
+    {
+        position: relative;
+        font-family: 'Noto Sans', sans-serif;
+        font-size: 20px;
+        color: var(--nav-links-color);
+    }
+
+    nav ul li a::before
+    {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        width: 0;
+        border-bottom: 2px solid var(--links-hover-border-color);
+        transition: width .2s ease-in;
+    }
+
+    nav ul li a:not(.active):hover::before
+    {
+        width: 100%;
+        transition: width .2s ease-in;
+    }
+
+    nav ul li a.active
+    {
+        border-bottom: 2px solid var(--links-hover-border-color);
+    }
+
+    @media screen and (min-width: 768px)
+    {
+        nav
+        {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            text-align: center;
+            height: 100%;
+            width: 100%;
+        }
+
+        nav h1
+        {
+            left: 100px;
+            font-size: 25px;
+        }
+
+        nav ul
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+        }
+
+        nav ul li
+        {
+            display: inline-block;
+        }
+
+        nav ul > li:not(:last-child)
+        {
+            margin-bottom: 0;
+        }
+    }
+</style>
