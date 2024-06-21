@@ -1,1 +1,28 @@
+---
+import Section from './Section.astro'
+import HeroHeading from './HeroHeading.astro'
+import HeroParagraph from './HeroParagraph.astro'
+import DownloadButton from './DownloadButton.astro'
+import Creator from './Creator.astro'
+---
 
+<Section className="hero" id="hero">
+    <div class="container hero-section-container">
+       <HeroHeading/>
+       <HeroParagraph/>
+       <DownloadButton/>
+    </div>
+    <Creator/>
+</Section>
+
+<style>
+    .hero-section-container
+    {
+        font-family: 'Noto Sans', sans-serif;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+</style>
