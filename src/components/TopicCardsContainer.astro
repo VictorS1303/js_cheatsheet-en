@@ -1,1 +1,31 @@
-<h1>Hey</h1>
+---
+import TopicCard from './TopicCard.astro'
+---
+
+<div class="container topic-cards-container">
+    <TopicCard/>
+</div>
+
+<style>
+    .container.topic-cards-container
+    {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 500px;
+        overflow-y: auto;
+        padding: 20px;
+    }
+
+    @media screen and (min-width: 768px)
+    {
+        .container.topic-cards-container
+        {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+</style>
