@@ -1,0 +1,46 @@
+---
+import Modal from "./Modal.astro";
+import DownloadButton from "./DownloadButton.astro";
+
+---
+
+<Modal className="modal download-modal">
+     <div>
+        <img src="public/images/test_images/modal_test_image.jpg" />
+        <DownloadButton
+            href="public/images/test_images/modal_test_image.jpg"
+            class="download-button"
+            id="download_button"
+            download="test_image"
+        >
+            1. semester <i class="fas fa-download"></i>
+        </DownloadButton>
+    </div>
+    <div>
+        <img src="../../public/images/test_images/modal_test_image.jpg" />
+        <DownloadButton
+            href="public/images/test_images/modal_test_image.jpg"
+            class="download-button"
+            id="download_button"
+            download="test_image"
+        >
+            2. semester <i class="fas fa-download"></i>
+        </DownloadButton>
+    </div>
+</Modal>
+
+<style>
+    div {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    div img {
+        height: 250px;
+        width: 100%;
+        border-radius: calc(var(--base-border-radius) / 2);
+        object-fit: contain;
+    }
+
+</style>

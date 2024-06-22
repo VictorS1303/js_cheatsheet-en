@@ -22,7 +22,10 @@
     --links-hover-border-color: #ff0;
     --link-active-color: #ff0;
     --mobile-header-background-color: #191970;
+    --modal-background-color: #191970;
+    --btn-text-color: #191970;
     --btn-background-color: #ff0;
+
 
     /* Radii */
     --base-border-radius: 10px;
@@ -52,6 +55,7 @@ h1, h2, h3, h4, h5, h6
 {
     font-family: 'Oswald', sans-serif;
     color: var(--primary-heading-color);
+    white-space: nowrap;
 }
 
 p

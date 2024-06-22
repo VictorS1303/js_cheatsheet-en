@@ -1,7 +1,22 @@
 ---
-import Button from './Button.astro'
+const {className, id, href, download = true} = Astro.props
 ---
 
-<Button>
-    Code Examples <i class="fas fa-download"></i>
-</Button>
+<a href={href} class={className} id={id} download={download}>
+    <slot/>
+</a>
+
+<style>
+    a
+    {
+        font-family: 'Noto Sans', sans-serif;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 10px;
+        color: var(--btn-text-color);
+        background-color: var(--btn-background-color);
+        border-radius: calc(var(--base-border-radius) * 5);
+
+    }
+</style>

@@ -1,0 +1,75 @@
+---
+import ModalCloseButton from "./ModalCloseButton.astro";
+const {className, id} = Astro.props
+
+---
+
+<div class={className} id={id}>
+    <ModalCloseButton/>
+    <slot/>
+</div>
+
+<style>
+    .modal {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 40px;
+        position: absolute;
+        top: -100%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        min-height: 600px;
+        padding: 20px;
+        width: 340px;
+        background-color: var(--modal-background-color);
+        border-radius: var(--base-border-radius);
+        transition: top .4s ease-in;
+    }
+
+    .modal.active
+    {
+        top: 50%;
+        transition: top .4s ease-in;
+    }
+
+    
+    @media screen and (min-width: 768px) {
+        .modal
+        {
+            flex-direction: row;
+            gap: 100px;
+            max-height: 350px;
+            width: 700px;
+        }
+
+        .modal > div {
+            display: flex;
+        }
+
+        .modal header {
+        }
+    }
+</style>
+
+
+<script>
+    const modalOpenButton = document.querySelector('.modal-open-button')
+    const modalCloseButton = document.querySelector('.modal-close-btn')
+    const downloadModal = document.querySelector('.download-modal')
+
+    modalOpenButton.addEventListener('click', openModal)
+    modalCloseButton.addEventListener('click', closeModal)
+
+    function openModal()
+    {
+        downloadModal.classList.add('active')
+    }
+
+    function closeModal()
+    {
+        downloadModal.classList.remove('active')
+    }
+</script>

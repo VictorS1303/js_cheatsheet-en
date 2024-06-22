@@ -3,10 +3,13 @@ import Navbar from '../components/Navbar.astro'
 import Layout from '../layouts/Layout.astro'
 import Section from '../components/Section.astro'
 import Hero from '../components/Hero.astro'
+import DownloadModal from '../components/DownloadModal.astro'
 ---
 
 <Layout title="JS Cheat Sheet | Home">
+    <Navbar/>
     <Section className="hero" id="hero">
         <Hero/>
     </Section>
+    <DownloadModal/>
 </Layout>
