@@ -1,0 +1,26 @@
+---
+const { className, id, href, buttonText } = Astro.props
+---
+
+<a class={className} id={id} href={href}>
+    {buttonText}
+</a>
+
+<style>
+    a
+    {
+        font-family: 'Noto Sans', sans-serif;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 17px;
+        color: var(--nav-links-color);
+        transition: .15s ease-in;
+    }
+
+    a:hover
+    {
+        color: #ff0;
+        transition: .15s ease-in;
+    }
+</style>

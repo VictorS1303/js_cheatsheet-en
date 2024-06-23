@@ -26,7 +26,16 @@
     --btn-text-color: #191970;
     --btn-background-color: #ff0;
     --topic-card-background-color: #191970;
+    --preview-card-background-color: #191970;
     
+    /* Code Colors */
+    --keyword-text-color: #ff0;
+    --name-text-color: #aa85fa;
+    --parentheses-text-color: #32cd32;
+    --curly-brackets-text-color: #40e0d0;
+    --code-text-color: #ff9;
+
+
 
 
     /* Radii */
@@ -65,4 +74,35 @@ p
     font-family: 'Noto Sans', sans-serif;
     font-size: 20px;
     color: var(--paragraph-color);
+}
+
+pre {
+    white-space: pre-line;
+}
+
+
+/* Code Words */
+.keyword
+{
+    color: var(--keyword-text-color);
+}
+
+.name
+{
+    color: var(--name-text-color);
+}
+
+.parentheses
+{
+    color: var(--parentheses-text-color);
+}
+
+.curly-brackets
+{
+    color: var(--curly-brackets-text-color);
+}
+
+.code
+{
+    color: var(--code-text-color);
 }

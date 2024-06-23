@@ -2,61 +2,61 @@
 const cardsData =
 [
     {
-        cardURL: 'functions.html',
+        cardURL: 'functions',
         cardFrontText: 'Funktioner',
         cardBackText: 'function myFunction()',
         topicNumber: 1,
     },
     {
-        cardURL: 'variables_constants.html',
+        cardURL: 'variables_constants',
         cardFrontText: 'Variable/Konstante',
         cardBackText: 'var, let, const',
         topicNumber: 2
     },
     {
-        cardURL: 'selectors.html',
+        cardURL: 'selectors',
         cardFrontText: 'Selectors',
         cardBackText: 'Klasser, ID\'er & elementer',
         topicNumber: 3
     },
     {
-        cardURL: 'events.html',
+        cardURL: 'events',
         cardFrontText: 'Eventlisteners',
         cardBackText: '.addEventListener()',
         topicNumber: 4
     },
     {
-        cardURL: 'classes.html',
+        cardURL: 'classes',
         cardFrontText: 'Klassemanipulation',
         cardBackText: '.add(), .remove(), .toggle(),\n .contains() & .classList()',
         topicNumber: 5
     },
     {
-        cardURL: 'timers.html',
+        cardURL: 'timers',
         cardFrontText: 'Timers',
         cardBackText: 'setInterval()/setTimeout()',
         topicNumber: 6
     },
     {
-        cardURL: 'random.html',
+        cardURL: 'random',
         cardFrontText: 'Tilfældighed',
         cardBackText: 'Math.random()',
         topicNumber: 7
     },
     {
-        cardURL: 'conditions.html',
+        cardURL: 'conditions',
         cardFrontText: 'Forhold',
         cardBackText: 'if/else',
         topicNumber: 8
     },
     {
-        cardURL: 'console.html',
+        cardURL: 'console',
         cardFrontText: 'Konsollen',
         cardBackText: 'console.log()',
         topicNumber: 9
     },
     {
-        cardURL: 'sound.html',
+        cardURL: 'sound',
         cardFrontText: 'Lyd',
         cardBackText: '.play(), .pause(), .muted,\n .volume, .duration, .currentTime',
         topicNumber: 10
@@ -70,7 +70,7 @@ console.log(cardsData[9].cardBackText)
     {
         cardsData.map((card) =>
         (
-                <a href="`topics/first_semester/${card.cardURL}`">
+                <a href=`topics/${card.cardURL}`>
                     <div class="card topic-card">
                         <div class="inner-card">
                             <div class="front-card">
@@ -140,6 +140,7 @@ console.log(cardsData[9].cardBackText)
         justify-content: center;
         align-items: center;
         text-align: center;
+    
         width: 100%;
         height: 100%;
         background-color: var(--topic-card-background-color);
@@ -150,9 +151,14 @@ console.log(cardsData[9].cardBackText)
 
     .back-card
     {     
-        padding: 0 10px;
         background-color: var(--topic-card-background-color);
         transform: rotateY(180deg);
+    }
+
+    .back-card h2
+    {
+        padding: 10px 60px;
+        white-space: pre;
     }
 
     .topic-title
