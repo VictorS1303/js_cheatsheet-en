@@ -1,0 +1,9 @@
+---
+const {class: className, headerText} = Astro.props
+---
+
+<header class:list={`header ${className}`}>
+    <h2>
+       {headerText}
+    </h2>
+</header>

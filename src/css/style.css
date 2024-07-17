@@ -34,6 +34,17 @@
     --parentheses-text-color: #32cd32;
     --curly-brackets-text-color: #40e0d0;
     --code-text-color: #ff9;
+    --equal-text-color: #cbcb2b;
+    --value-text-color: #bbddda;
+    --class-text-color: #ff6347;
+    --id-text-color: #849ce5;
+    --element-text-color: #b2b5c0;
+    --method-text-color: #f3f3a9;
+    --quotes-text-color: #d6d6d6;
+    --event-type-text-color: #dadce4;
+    --object-text-color: #f82fff;
+    --condition-text-color: #74ebe1;
+    --operand-text-color: #df0303;
 
 
 
@@ -76,33 +87,115 @@ p
     color: var(--paragraph-color);
 }
 
-pre {
+pre
+{
     white-space: pre-line;
 }
 
-
-/* Code Words */
-.keyword
+li
 {
-    color: var(--keyword-text-color);
+    font-family: 'Noto Sans', sans-serif;
+    color: #fff;
 }
 
-.name
+.example
 {
-    color: var(--name-text-color);
+    font-family: 'Noto Sans', sans-serif;
+    color: #fff;
 }
 
-.parentheses
+.example-link
 {
-    color: var(--parentheses-text-color);
+    font-family: 'Noto Sans', sans-serif;
+    color: #fff;
+    border-bottom: 2px solid #fff;
 }
 
-.curly-brackets
+@media screen and (min-width: 768px)
 {
-    color: var(--curly-brackets-text-color);
-}
+    .example
+    {
+        display: none;
+    }
 
-.code
-{
-    color: var(--code-text-color);
+    /* Code Words */
+    .keyword
+    {
+        color: var(--keyword-text-color);
+    }
+
+    .name
+    {
+        color: var(--name-text-color);
+    }
+
+    .parentheses
+    {
+        color: var(--parentheses-text-color);
+    }
+
+    .curly-brackets
+    {
+        color: var(--curly-brackets-text-color);
+    }
+
+    .code
+    {
+        color: var(--code-text-color);
+    }
+
+    .equal
+    {
+        color: var(--equal-text-color);
+    }
+
+    .value
+    {
+        color: var(--value-text-color);
+    }
+
+    .class
+    {
+        color: var(--class-text-color);
+    }
+
+    .id
+    {
+        color: var(--id-text-color);
+    }
+
+    .element
+    {
+        color: var(--element-text-color);
+    }
+
+    .method
+    {
+        color: var(--method-text-color);
+    }
+
+    .quote
+    {
+        color: var(--quotes-text-color);
+    }
+
+    .event-type
+    {
+        color: var(--event-type-text-color);
+    }
+
+    .object
+    {
+        color: var(--object-text-color);
+    }
+
+    .condition
+    {
+        color: var(--condition-text-color);
+    }
+
+    .operand
+    {
+        color: var(--operand-text-color);
+    }
 }

@@ -1,10 +1,47 @@
 ---
 import Layout from '../../layouts/Layout.astro'
 import BackButton from '../../components/BackButton.astro'
-import Slideshow from '../../components/Slideshow.astro'
+import DescriptionCard from '../../components/DescriptionCard.astro'
+import CodePreviewCard from '../../components/CodePreviewCard.astro'
+import DescriptionCardHeader from '../../components/DescriptionCardHeader.astro'
+import DescriptionCardText from '../../components/DescriptionCardText.astro'
+import DescriptionCardExampleLink from '../../components/DescriptionCardExampleLink.astro'
 ---
 
 <Layout title="JS Cheat Sheet | Functions">
-    <BackButton className="back-button" id="back_button" href="../first_semester.html" buttonText="Til oversigt"/>
-    <Slideshow/>
+    <BackButton className="back-button" id="back_button" href="../first_semester" buttonText="Til oversigt"/>
+
+    <div class="container desc-container">
+
+        <DescriptionCard class="card what-card">
+            <div class="what">
+                <DescriptionCardHeader class="what-header" headerText="Hvad er en funktion?" />
+                <DescriptionCardText>
+                    En funktion er en måde at skrive sin kode på, så man kan genanvende det i stedet for at skrive de samme linjer kode alle steder, hvor den samme ting skal udføres. En funktion gør det også meget lettere at overskue sin kode.
+                    Et eksempel kan findes <DescriptionCardExampleLink href="https://codepen.io/Schweitz/pen/XWLbedz" linkText="her." target="_blank">
+                </DescriptionCardText>
+            </div>
+        </DescriptionCard>        
+      
+        <DescriptionCard class="card definition-card">
+            <DescriptionCardHeader class="syntax-header" headerText="Syntaks"/>
+            <DescriptionCardText>
+                En funktion starter med <span class="keyword">function</span> efterfulgt af <span class="name">funktionsnavnet</span>, som du helt selv bestemmer. Derefter kommer et sæt <span class="parentheses">parenteser</span> efterfulgt af et sæt <span class="curly-brackets">tuborgparenteser</span>, og inde i disse det kode, som funktionen skal udføre.
+                En funktion gør ikke noget, før den bliver kaldt. Dette ses i eksemplet.
+            </DescriptionCardText>
+            <div class="code-preview-container">
+                <CodePreviewCard>
+                    <h3>
+                        <pre>
+                            <span class="keyword">function</span> <span class="name">myFunction</span><span class="parentheses">()</span>
+                            <span class="curly-brackets">&#123;</span>
+                            <span class="code preview-card-code">// Kode her</span>
+                            <span class="curly-brackets">&#125;</span>
+                        </pre>
+                    </h3>
+                </CodePreviewCard>
+            </div>
+        </DescriptionCard>
+    </div>
 </Layout>
+

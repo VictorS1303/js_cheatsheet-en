@@ -1,0 +1,62 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import BackButton from '../../components/BackButton.astro'
+import DescriptionCard from '../../components/DescriptionCard.astro'
+import CodePreviewCard from '../../components/CodePreviewCard.astro'
+import DescriptionCardHeader from '../../components/DescriptionCardHeader.astro'
+import DescriptionCardText from '../../components/DescriptionCardText.astro'
+import DescriptionCardExampleLink from '../../components/DescriptionCardExampleLink.astro'
+---
+
+<Layout title="JS Cheat Sheet | Variables">
+    <BackButton className="back-button" id="back_button" href="../first_semester" buttonText="Til oversigt"/>
+
+    <div class="container desc-container variables-contants-desc-container">
+        <DescriptionCard class="card what-card">
+            <div class="card what-card">
+                <DescriptionCardHeader class="what-header" headerText="Hvad er variabel?" />
+
+                <DescriptionCardText>
+                    En variabel er en reference til en værdi.
+                    <br/>
+                    <br/>
+                    Der er tre primære variabeltyper -
+                    <span class="keyword"><em>var</em></span>,
+                    <span class="keyword"><em>let</em></span> og
+                    <span class="keyword"><em>const</em></span>.
+                    
+                    En <span class="keyword"><em>const</em></span>-variabels værdi kan <em>ikke</em> overskrives, hvilket vil sige, at når den har fået en værdi, har den denne værdi <em>altid</em> (det er primært denne type, man bruger, når man skal have fat i et HTML-element).
+                    En <span class="keyword"><em>let</em></span>- eller <span class="keyword"><em>var</em></span>-variabels værdi kan overskrives.
+                    <br />
+                    <br />
+                    Det anbefales dog altid, at man anvender <span class="keyword"><em>let</em></span> til variable, hvis værdier på et senere tidspunkt skal overskrives.
+                    Se uddybende forklaring og eksempler på brugen af de forskellige variable <DescriptionCardExampleLink href="https://codepen.io/Schweitz/pen/VwJLEvE" linkText="her." target="_blank">
+                </DescriptionCardText>
+            </div>
+        </DescriptionCard>
+
+        <DescriptionCard class="card syntax-card">
+            <DescriptionCardHeader class="syntax-header" headerText="Syntaks" /> 
+
+            <DescriptionCardText>
+                En variabel defineres ved, at man først skriver variabeltypen <span class="keyword"><em>const</em></span>,
+                <span class="keyword"><em>let</em></span> (eller <span class="keyword"><em>var</em></span>). Dernæst følger variablens <span class="name">navn</span>,
+                som er et, du helt selv vælger. Dette navn er <b><em>den værdi</em></b>, der angiver referencen til variablen. 
+                Dernæst følger et lighedstegn <span class="equal">=</span>, hvorefter variablens <span class="value">værdi</span> følger.
+                Dette er rækkefølgen/syntaksen, uanset om du har med en <span class="keyword"><em>var</em></span>-, <span class="keyword"><em>let</em></span>- eller <span class="keyword">const</span>-variabel at gøre.
+            </DescriptionCardText>
+
+            <div class="code-preview-card">
+                <CodePreviewCard>
+                    <h3>
+                        <pre>
+                            <span class="keyword">var</span> <span class="name">myVariable</span> <span class="equal">=</span> <span class="value">værdi</span>
+                            <span class="keyword">let</span> <span class="name">myVariable</span> <span class="equal">=</span> <span class="value">værdi</span>
+                            <span class="keyword">const</span> <span class="name">myVariable</span> <span class="equal">=</span> <span class="value">værdi</span>
+                        </pre>
+                    </h3>
+                </CodePreviewCard>
+            </div>
+        </DescriptionCard>
+    </div>
+</Layout>

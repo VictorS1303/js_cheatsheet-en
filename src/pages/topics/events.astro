@@ -1,0 +1,49 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import BackButton from '../../components/BackButton.astro'
+import DescriptionCard from '../../components/DescriptionCard.astro'
+import CodePreviewCard from '../../components/CodePreviewCard.astro'
+import DescriptionCardHeader from '../../components/DescriptionCardHeader.astro'
+import DescriptionCardText from '../../components/DescriptionCardText.astro'
+import DescriptionCardExampleLink from '../../components/DescriptionCardExampleLink.astro'
+---
+
+<Layout title="JS Cheat Sheet | Events">
+    <BackButton className="back-button" id="back_button" href="../first_semester" buttonText="Til oversigt"/>
+
+    <div class="container desc-container">
+       <DescriptionCard class="card what-card">
+            <div class="card what-card">
+                <DescriptionCardHeader class="what-header" headerText="Eventlisteners" />
+
+                <DescriptionCardText>
+                    En event listener er en måde at lytte til events på.
+                    Nærmest alle interaktioner med browseren er et event - alt fra input og tastetryk til klik og alt derimellem.
+                    De bruges i JavaScript til at gøre, hvad man har defineret skal ske, når dette event udløses.
+                    Eventlisteners bliver som oftest tilføjet til en variabel.
+                    Se uddybende forklaring med eksempler <DescriptionCardExampleLink href="https://codepen.io/Schweitz/pen/qBzdgGv" linkText="her." target="_blank"/>
+                </DescriptionCardText>
+            </div>
+       </DescriptionCard>
+
+       <DescriptionCard class="card syntax-card">
+            <div class="card syntax-card">
+                <DescriptionCardHeader class="syntax-header" headerText="Syntaks" />
+                <DescriptionCardText>
+                    Event listeners tilføjes til et element ved brugen af den i JavaScript indbyggede funktion <span class="method">.addEventListener</span>.
+                    Man skriver derfor først sit <span class="name">variabelnavn</span> direkte efterfulgt af <span class="method">.addEventListener()</span>.
+                    Inde i parenteserne skrives et sæt <span class="quote">citationstegn</span>, hvori <span class="event-type">eventtypen</span> skrives.
+                    Dernæst følger et komma efterfulgt af <span class="name">navnet</span> på den <span class="function">funktion</span>, som skal kaldes ved eventet.
+                </DescriptionCardText>
+            </div>
+            <CodePreviewCard>
+                <h3>
+                    <pre>
+                       <span class="name">variabelNavn</span><span class="method">.addEventListener
+                        <span class="parentheses">(</span><span class="quote">'</span><span class="event-type">eventtype</span><span class="quote">'</span>, <span class="name">funktionsNavn</span><span class="parentheses">)</span></span> 
+                    </pre>
+                </h3>
+            </CodePreviewCard>
+       </DescriptionCard>
+    </div>
+</Layout>

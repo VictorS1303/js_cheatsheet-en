@@ -1,0 +1,51 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import BackButton from '../../components/BackButton.astro'
+import DescriptionCard from '../../components/DescriptionCard.astro'
+import CodePreviewCard from '../../components/CodePreviewCard.astro'
+import DescriptionCardHeader from '../../components/DescriptionCardHeader.astro'
+import DescriptionCardText from '../../components/DescriptionCardText.astro'
+import DescriptionCardExampleLink from '../../components/DescriptionCardExampleLink.astro'
+---
+
+<Layout title="JS Cheat Sheet | Lyd">
+    <BackButton className="back-button" id="back_button" href="../first_semester" buttonText="Til oversigt"/>
+
+    <div class="container desc-container">
+        <DescriptionCard class="card what-card">
+            <DescriptionCardHeader headerText="Lyd" />
+
+            <DescriptionCardText>
+                For at afspille lyd i browseren via JavaScript, er man nødt til at have et <span class="element">audio</span>-element i sin HTML, som man dernæst henter ind i sin JavaScript fil som en variabel.
+                Først derefter kan man begynde at arbejde med lyd.
+                Der er rigtigt mange ting, man kan ændre på, når det kommer til lyd, men dem, som man bruger på 1. semester, er følgende:
+                .play(), .pause(), .muted, .volume, .duration og .currentTime. 
+                Se et eksempel med dem alle <DescriptionCardExampleLink linkText="her." href="https://www.codepen.io" target="_blank"/>
+            </DescriptionCardText>
+        </DescriptionCard>
+
+        <DescriptionCard class="card syntax-card">
+            <div class="card syntax-card">
+                <DescriptionCardHeader headerText="Syntaks" />
+                
+                <DescriptionCardText>
+                    For at kunne bruge nogle af de ting, der er, når det kommer til lyd, skal man først have sit <span class="element">audio</span>-element hentet ind i sin JavaScript som en <span class="name">variabel</span>.
+                    Derefter kan man så begynde at bruge nogle af de ting, der er, når det kommer til at arbejde med lyd.
+                    I eksemplet nedenunder vil lyden begynde at afspille.
+                </DescriptionCardText>
+            </div>
+
+            <CodePreviewCard>
+                <h3>
+                    <pre>
+                        // Variabel
+                        <span class="keyword">const</span> <span class="name">audio</span> <span class="equal">=</span> <span class="object">document</span><span class="method">.querySelector</span><span class="parentheses">(</span><span class="quote">'</span><span class="selector">audio</span><span class="quote">'</span><span class="parentheses">)</span>
+
+                        // Afspil lyd
+                        <span class="name">audio</span><span class="method">.play()</span>
+                    </pre>
+                </h3>
+            </CodePreviewCard>
+        </DescriptionCard>
+    </div>
+</Layout>

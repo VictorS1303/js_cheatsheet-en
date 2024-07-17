@@ -1,0 +1,91 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import BackButton from '../../components/BackButton.astro'
+import DescriptionCard from '../../components/DescriptionCard.astro'
+import CodePreviewCard from '../../components/CodePreviewCard.astro'
+import DescriptionCardHeader from '../../components/DescriptionCardHeader.astro'
+import DescriptionCardText from '../../components/DescriptionCardText.astro'
+import DescriptionCardExampleLink from '../../components/DescriptionCardExampleLink.astro'
+---
+
+<Layout title="JS Cheat Sheet | Sammenlignende operatorer">
+    <BackButton className="back-button" id="back_button" href="../first_semester" buttonText="Til oversigt"/>
+
+    <div class="container desc-container">
+        <DescriptionCard class="card what-card">
+            <div class="card what-card">
+                <DescriptionCardHeader headerText="Operatorer" />
+
+                <DescriptionCardText>
+                    Operatorer bruges til at bestemme en værdi ud fra to eller flere tal. I programmering bruges de i langt de fleste tilfælde sammen med if-sætninger til at tjekke, om noget er sandt.
+                    Det kunne for eksempel være at tjekke, om et tal er lig med et andet.
+
+                    
+                    <CodePreviewCard>
+                        <h4>De mest brugte operatorer er:</h4>
+                        <ul>
+                            <li>
+                                <span class="operand">&&</span> (and)
+                            </li>
+                            <li>
+                                <span class="operand">||</span> (or)
+                            </li>
+                            <li>
+                                <span class="operand">&gt;</span> (større end)
+                            </li>
+                            <li>
+                                <span class="operand">&lt;</span> (mindre end)
+                            </li>
+                            <li>
+                                <span class="operand">&lt;&equals;</span> (mindre end eller lig med)
+                            </li>
+                            <li>
+                                <span class="operand">&gt;&equals;</span> (større end eller lig med)
+                            </li>
+                            <li>
+                                <span class="operand">&equals;</span> (lig med)
+                            </li>
+                            <li>
+                                <span class="operand">&equals;&equals;</span> (lig med samme værdi)
+                            </li>
+                            <li>
+                                <span class="operand">&excl;&equals;</span> (ikke lig med)
+                            </li>
+                        </ul>
+                    </CodePreviewCard>
+                </DescriptionCardText>
+            </div>
+        </DescriptionCard>
+
+        <DescriptionCard class="syntax-card">
+            <div class="card syntax-card">
+                <DescriptionCardHeader headerText="Syntaks" />
+
+                <DescriptionCardText>
+                    Der er ikke som sådan en syntaks for operatorerne alene, da disse bare er symboler, der udfører en bestemt handling.
+                    
+                    De giver bedst mening at vise hver især i forbindelse med en if-sætning, hvilket I kan se eksempler på <DescriptionCardExampleLink linkText="her." href="https://codepen.io/Schweitz/pen/MWMaBOB" target="_blank" /> 
+                    
+                </DescriptionCardText>
+            </div>
+        </DescriptionCard>
+    </div>
+</Layout>
+
+<style>
+    ul
+    {
+        width: 100%;
+        white-space: nowrap;
+    }
+
+    li
+    {
+        display: flex;
+        justify-content: space-between;
+    }
+    h4
+    {
+        color: #fff;
+    }
+</style>

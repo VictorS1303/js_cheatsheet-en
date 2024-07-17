@@ -1,0 +1,60 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import BackButton from '../../components/BackButton.astro'
+import DescriptionCard from '../../components/DescriptionCard.astro'
+import CodePreviewCard from '../../components/CodePreviewCard.astro'
+import DescriptionCardHeader from '../../components/DescriptionCardHeader.astro'
+import DescriptionCardText from '../../components/DescriptionCardText.astro'
+import DescriptionCardExampleLink from '../../components/DescriptionCardExampleLink.astro'
+---
+
+<Layout title="JS Cheat Sheet | Konsollen">
+    <BackButton className="back-button" id="back_button" href="../first_semester" buttonText="Til oversigt"/>
+    <div class="container desc-container">
+        <DescriptionCard class="card what-card">
+            <DescriptionCardHeader headerText="Konsollen" />
+
+            <DescriptionCardText>
+                Konsollen bruges primært til at finde fejl i ens kode. Det er der, du får din fejlmeddelelse, og det er også det værktøj, du kan bruge til at logge forskellige dele af din kode for at finde ud af, hvad og hvor fejlen(e) er.
+                Konsollen åbnes i browseren ved at højreklikke hvor som helst og dernæst trykke "Inspicér" eller "Undersøg" (alt efter din browser).
+                De kan også åbnes med de tastaturgenveje, der er vist nedenfor:
+            </DescriptionCardText>
+
+            <CodePreviewCard>
+                <h4>MacBook:</h4>
+                <h3>
+                    <pre>
+                        Chrome: ⌘ + Option + J
+                        Firefox: ⌘ + Option + K
+                    </pre>
+                </h3>
+                <h4 style="margin-top: 20px;">Windows:</h4>
+                <h3>
+                    <pre>
+                        Chrome: CTRL + Shift + K
+                        Firefox: CTRL + Shift + K
+                    </pre>
+                </h3>
+            </CodePreviewCard>
+        </DescriptionCard>
+
+        <DescriptionCard class="card syntax-card">
+            <DescriptionCardHeader headerText="Syntaks" />
+
+            <DescriptionCardText>
+                Der er ikke som sådan nogen syntaks til konsollen, da det er helt almindelig JavaScript, man skriver i den.
+                For at logge noget til konsollen fra ens text editor, skrives <span class="object">console</span><span class="method">.log</span> efterfulgt af et sæt <span class="parentheses">parenteser</span>.
+                Inde i parentserne skrives så det, man vil logge, hvilket kan være hvad som helst, der er brugbart for at løse ens problem.
+                Se eksempel på brug af konsollen <DescriptionCardExampleLink href="https://www.codepen.io" linkText="her." target="_blank" />
+            </DescriptionCardText>
+
+            <CodePreviewCard>
+                <h3>
+                    <pre>
+                        <span class="object">console</span><span class="method">.log</span><span class="parentheses">()</span>
+                    </pre>
+                </h3>
+            </CodePreviewCard>
+        </DescriptionCard>
+    </div>
+</Layout>

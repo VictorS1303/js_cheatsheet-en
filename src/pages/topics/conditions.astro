@@ -1,0 +1,53 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import BackButton from '../../components/BackButton.astro'
+import DescriptionCard from '../../components/DescriptionCard.astro'
+import CodePreviewCard from '../../components/CodePreviewCard.astro'
+import DescriptionCardHeader from '../../components/DescriptionCardHeader.astro'
+import DescriptionCardText from '../../components/DescriptionCardText.astro'
+import DescriptionCardExampleLink from '../../components/DescriptionCardExampleLink.astro'
+---
+
+
+<Layout title="JS Cheat Sheet | Forhold">
+    <BackButton className="back-button" id="back_button" href="../first_semester" buttonText="Til oversigt"/>
+
+    <div class="container desc-container">
+        <DescriptionCard class="card what-card">
+            <div class="card what-card">
+                <DescriptionCardHeader class="what-header" headerText="Forhold" />
+
+                <DescriptionCardText>
+                    Forhold bruges til at tjekke, om et udsagn er enten sandt eller falsk.
+                    Forestil dig, at du er ude at købe ind, og du kun har plads til 10 varer i din indkøbskurv.
+                    For hver gang du lægger en vare i din kurv, tjekker du, om din kurv er fyldt. Dette vil altid være falsk, indtil du lægger din tiende vare i kurven.
+                    Når du gør det, har du ikke plads til flere varer i din kurv, og dermed vil udtrykket, om din kurv er fyldt, være sandt, og du vil derfor ikke kunne lægge flere varer i din kurv.
+                </DescriptionCardText>
+            </div>
+        </DescriptionCard>
+
+        <DescriptionCard class="card what-card">
+            <DescriptionCardHeader class="syntax-header" headerText="Syntaks" />
+
+            <DescriptionCardText>
+                En <span class="keyword">if</span>-sætning starter med, at man skriver <span class="keyword">if</span> efterfulgt af et sæt <span class="parentheses">parenteser</span> indeholdende betingelsen.
+                Derefter kommer et sæt <span class="curly-brackets">tuborgparenteser</span>, inde i hvilken den kode, der skal køres, står.
+                
+                Der er mere til en <span class="keyword">if</span>-sætning, og det kan ses i eksemplet <DescriptionCardExampleLink href="https://www.codepen.io" linkText="her." target="_blank" />
+            </DescriptionCardText>
+
+            <div class="code-preview-container">
+                <CodePreviewCard>
+                    <h3>
+                        <pre>
+                            <span class="keyword">if</span> <span class="parentheses">(<span class="condition">betingelse</span>)</span>
+                            <span class="curly-brackets">&#123;</span>
+                            <span class="code preview-card-code">// Kode her</span>
+                            <span class="curly-brackets">&#125;</span>
+                        </pre>
+                    </h3>
+                </CodePreviewCard>
+            </div>
+        </DescriptionCard>
+    </div>
+</Layout>

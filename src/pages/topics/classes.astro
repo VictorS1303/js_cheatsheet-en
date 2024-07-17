@@ -1,0 +1,51 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import BackButton from '../../components/BackButton.astro'
+import DescriptionCard from '../../components/DescriptionCard.astro'
+import CodePreviewCard from '../../components/CodePreviewCard.astro'
+import DescriptionCardHeader from '../../components/DescriptionCardHeader.astro'
+import DescriptionCardText from '../../components/DescriptionCardText.astro'
+import DescriptionCardExampleLink from '../../components/DescriptionCardExampleLink.astro'
+---
+
+<Layout title="JS Cheat Sheet | Klassemanipulation">
+    <BackButton className="back-button" id="back_button" href="../first_semester" buttonText="Til oversigt"/>
+
+    <div class="container desc-container">
+        <DescriptionCard class="card what-card">
+            <div class="card what-card">
+                <DescriptionCardHeader class="what-header" headerText="Klassemanipulation"/>
+
+                <DescriptionCardText>
+                    Klassemanipulation er at tilføje til og fjerne klasser fra et element. Dette bruges til at lave en interaktiv side.
+                    Tænk for eksempel på, når du åbner en mobilmenu ved at trykke på de tre streger. Når menuen kommer frem, bliver der tilføjet en klasse,
+                    der har noget styling, der gør, at menuen skal vise sig. Der er blevet manipuleret med klasserne på elementet.
+
+                    Der er indtil flere metoder til klassemanipulation, men de vigtigste er <span class="method">.add()</span>, <span class="method">.remove()</span> og <span class="method">.toggle()</span>.
+                    Disse er nemmere at vise hver især med et eksempel, som alle kan findes <DescriptionCardExampleLink href="https://codepen.io/Schweitz/pen/GRbpZeg" linkText="her." target="_blank"/>
+                </DescriptionCardText>
+            </div>
+        </DescriptionCard>
+
+        <DescriptionCard class="card syntax-card">
+            <div class="card syntax-card">
+                <DescriptionCardHeader class="syntax-header" headerText="Syntaks" />
+
+                <DescriptionCardText>
+                    Da disse er metoder som eventlisters, er syntaksen den samme.
+                    Først kommer <span class="name">variabelnavnet</span>, som efterfølges af et punktum og dernæst navnet på den metode, du ønsker at bruge.
+                    Dernæst kommer et sæt <span class="parentheses">parenteser</span>, hvori der er et sæt <span class="quote">citationstegn</span> ned navnet i på den klasse står, som skal gøres noget med.
+                </DescriptionCardText>
+            </div>
+
+            <CodePreviewCard>
+                <h3>
+                    <pre>
+                        <span class="name">variabelNavn</span><span class="method">.metodeNavn
+                            <span class="parentheses">(</span><span class="quote">'</span><span class="event-type">klassenavn</span><span class="quote">'</span><span class="parentheses">)</span></span>
+                    </pre>
+                </h3>
+            </CodePreviewCard>
+        </DescriptionCard>
+    </div>
+</Layout>

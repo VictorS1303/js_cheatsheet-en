@@ -1,0 +1,41 @@
+<div class="card preview-card" id="preview_card">
+   <slot/>
+</div>
+
+
+<style is:global>
+    .card.preview-card
+    {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 40px;
+        background-color: var(--preview-card-background-color);
+        text-align: left;
+        height: 250px;
+        margin-top: 20px;
+        font-size: 17px;
+        border-radius: var(--base-border-radius);
+        
+    }
+
+    .preview-card-code
+    {
+        margin-left: 30px;
+        white-space: nowrap;
+    }
+
+    @media screen and (min-width: 768px)
+    {
+        .card.preview-card
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    
+</style>

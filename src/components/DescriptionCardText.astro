@@ -1,0 +1,8 @@
+---
+const {class: className, id, descriptionCardText} = Astro.props
+---
+
+<p class=`text ${className}`>
+    {descriptionCardText}
+    <slot/>
+</p>
