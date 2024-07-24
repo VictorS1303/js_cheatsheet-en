@@ -6,6 +6,7 @@ import CodePreviewCard from '../../components/CodePreviewCard.astro'
 import DescriptionCardHeader from '../../components/DescriptionCardHeader.astro'
 import DescriptionCardText from '../../components/DescriptionCardText.astro'
 import DescriptionCardExampleLink from '../../components/DescriptionCardExampleLink.astro'
+import DownloadButton from '../../components/DownloadButton.astro'
 ---
 
 <Layout title="JS Cheat Sheet | Konsollen">
@@ -45,7 +46,15 @@ import DescriptionCardExampleLink from '../../components/DescriptionCardExampleL
                 Der er ikke som sådan nogen syntaks til konsollen, da det er helt almindelig JavaScript, man skriver i den.
                 For at logge noget til konsollen fra ens text editor, skrives <span class="object">console</span><span class="method">.log</span> efterfulgt af et sæt <span class="parentheses">parenteser</span>.
                 Inde i parentserne skrives så det, man vil logge, hvilket kan være hvad som helst, der er brugbart for at løse ens problem.
-                Se eksempel på brug af konsollen <DescriptionCardExampleLink href="https://www.codepen.io" linkText="her." target="_blank" />
+                Download eksempel på brug af konsollen
+                <DownloadButton
+                    href="/public/zips/console-eksempel.zip"
+                    class="btn zip-file-download-btn"
+                    id="zip_file_download_btn"
+                    download="console-eksempel"
+                >
+                her.
+            </DownloadButton>
             </DescriptionCardText>
 
             <CodePreviewCard>

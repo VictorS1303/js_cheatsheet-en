@@ -6,9 +6,10 @@ const {className, id, href, download = true} = Astro.props
     <slot/>
 </a>
 
-<style>
-    a
+<style is:global>
+    a:has(.btn)
     {
+        
         font-family: 'Noto Sans', sans-serif;
         display: flex;
         justify-content: space-around;
@@ -17,6 +18,11 @@ const {className, id, href, download = true} = Astro.props
         color: var(--btn-text-color);
         background-color: var(--btn-background-color);
         border-radius: calc(var(--base-border-radius) * 5);
+    }
 
+    #zip_file_download_btn
+    {
+        color: #fff;
+        border-bottom: 2px solid #fff;
     }
 </style>

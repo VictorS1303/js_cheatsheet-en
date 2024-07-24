@@ -5,7 +5,7 @@ import DescriptionCard from '../../components/DescriptionCard.astro'
 import CodePreviewCard from '../../components/CodePreviewCard.astro'
 import DescriptionCardHeader from '../../components/DescriptionCardHeader.astro'
 import DescriptionCardText from '../../components/DescriptionCardText.astro'
-import DescriptionCardExampleLink from '../../components/DescriptionCardExampleLink.astro'
+import DownloadButton from '../../components/DownloadButton.astro'
 ---
 
 <Layout title="JS Cheat Sheet | Lyd">
@@ -20,7 +20,14 @@ import DescriptionCardExampleLink from '../../components/DescriptionCardExampleL
                 Først derefter kan man begynde at arbejde med lyd.
                 Der er rigtigt mange ting, man kan ændre på, når det kommer til lyd, men dem, som man bruger på 1. semester, er følgende:
                 .play(), .pause(), .muted, .volume, .duration og .currentTime. 
-                Se et eksempel med dem alle <DescriptionCardExampleLink linkText="her." href="https://www.codepen.io" target="_blank"/>
+                Se et eksempel med dem alle <DownloadButton
+                href="/public/zips/lyd-eksempel.zip"
+                class="btn zip-file-download-btn"
+                id="zip_file_download_btn"
+                download="lyd-eksempel"
+            >
+            her.
+        </DownloadButton>
             </DescriptionCardText>
         </DescriptionCard>
 
