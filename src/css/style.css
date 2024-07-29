@@ -8,8 +8,8 @@
     box-sizing: border-box;
     border: none;
     outline: none;
-    user-select: none;
 }
+
 
 :root
 {
@@ -45,6 +45,7 @@
     --object-text-color: #f82fff;
     --condition-text-color: #74ebe1;
     --operand-text-color: #df0303;
+    --property-text-color: #95ff31;
 
 
 
@@ -197,5 +198,10 @@ li
     .operand
     {
         color: var(--operand-text-color);
+    }
+
+    .property
+    {
+        color: var(--property-text-color);
     }
 }

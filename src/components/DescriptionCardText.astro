@@ -2,7 +2,14 @@
 const {class: className, id, descriptionCardText} = Astro.props
 ---
 
-<p class=`text ${className}`>
+<p class="text">
     {descriptionCardText}
     <slot/>
 </p>
+
+<style>
+    p.text
+    {
+        font-size: 30px;
+    }
+</style>

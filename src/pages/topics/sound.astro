@@ -15,20 +15,49 @@ import DownloadButton from '../../components/DownloadButton.astro'
         <DescriptionCard class="card what-card">
             <DescriptionCardHeader headerText="Lyd" />
 
-            <DescriptionCardText>
-                For at afspille lyd i browseren via JavaScript, er man nødt til at have et <span class="element">audio</span>-element i sin HTML, som man dernæst henter ind i sin JavaScript fil som en variabel.
-                Først derefter kan man begynde at arbejde med lyd.
-                Der er rigtigt mange ting, man kan ændre på, når det kommer til lyd, men dem, som man bruger på 1. semester, er følgende:
-                .play(), .pause(), .muted, .volume, .duration og .currentTime. 
-                Se et eksempel med dem alle <DownloadButton
-                href="/public/zips/lyd-eksempel.zip"
-                class="btn zip-file-download-btn"
-                id="zip_file_download_btn"
-                download="lyd-eksempel"
-            >
-            her.
-        </DownloadButton>
+                <DescriptionCardText>
+                        Der er rigtigt mange ting, man  kan ændre på, når det kommer til lyd, men dem, som man bruger på 1. semester, er følgende:
+                        <span class="method">.play</span><span class="parentheses">(</span><span class="parentheses">)</span>, <span class="method">.pause</span><span class="parentheses">(</span><span class="parentheses">)</span>, <span class="property">.muted</span>, <span class="property">.volume</span>, <span class="property">.duration</span> og <span class="property">.currentTime</span>. 
+                        Se et eksempel med dem alle
+                        
+                        <DownloadButton
+                            href="/public/zips/lyd-eksempel.zip"
+                            class="btn zip-file-download-btn"
+                            id="zip_file_download_btn"
+                            download="lyd-eksempel"
+                        >
+                        her.
+                     </DownloadButton>
             </DescriptionCardText>
+
+            <CodePreviewCard>
+                <ul>
+                    <li>
+                        <span>Afspil lyd:</span>
+                        <span><span class="method">.play</span><span class="parentheses">()</span></span>
+                    </li>
+                    <li>
+                        <span>Paus lyd:</span>
+                        <span><span class="method">.pause</span><span class="parentheses">()</span></span>
+                    </li>
+                    <li>
+                        <span>Mute lyd:</span>
+                        <span><span class="property">.muted</span></span>
+                    </li>
+                    <li>
+                        <span>Volumen:</span>
+                        <span><span class="property">.volume</span></span>
+                    </li>
+                    <li>
+                        <span>Lydens længde:</span>
+                        <span><span class="property">.duration</span></span>
+                    </li>
+                    <li>
+                        <span>Tid i lydfilen:</span>
+                        <span><span class="property">.currentTime</span></span>
+                    </li>
+                </ul>
+            </CodePreviewCard>
         </DescriptionCard>
 
         <DescriptionCard class="card syntax-card">
@@ -56,3 +85,13 @@ import DownloadButton from '../../components/DownloadButton.astro'
         </DescriptionCard>
     </div>
 </Layout>
+
+
+<style>
+    ul li
+    {
+        display: flex;
+        justify-content: space-between;
+        gap: 50px;
+    }
+</style>
