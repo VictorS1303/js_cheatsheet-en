@@ -46,8 +46,14 @@
     --condition-text-color: #74ebe1;
     --operand-text-color: #df0303;
     --property-text-color: #95ff31;
-
-
+    
+    /* Second Semester */
+    --array-text-color: #f957a8;
+    --square-brackets-text-color: #d03a85;
+    --object-key-text-color: lightgreen;
+    --colon-text-color: #7bdada;
+    --attribute-text-color: #ffb964;
+    --url-text-color: #cdcdcd;
 
 
     /* Radii */
@@ -204,4 +210,40 @@ li
     {
         color: var(--property-text-color);
     }
+
+    .square-brackets
+    {
+        color: var(--square-brackets-text-color);
+    }
+
+    .array
+    {
+        color: var(--array-text-color);
+    }
+
+    .object-key
+    {
+        color: var(--object-key-text-color);
+    }
+
+    .object-value
+    {
+        color: var(--object-value-text-color);
+    }
+
+    .colon
+    {
+        color: var(--colon-text-color);
+    }
+
+    .attribute
+    {
+        color: var(--attribute-text-color);
+    }
+
+    .url
+    {
+        color: var(--url-text-color);
+    }
+
 }

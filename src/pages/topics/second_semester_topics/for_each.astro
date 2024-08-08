@@ -1,0 +1,62 @@
+---
+import Layout from '../../../layouts/Layout.astro'
+import BackButton from '../../../components/BackButton.astro'
+import DescriptionCard from '../../../components/DescriptionCard.astro'
+import CodePreviewCard from '../../../components/CodePreviewCard.astro'
+import DescriptionCardHeader from '../../../components/DescriptionCardHeader.astro'
+import DescriptionCardText from '../../../components/DescriptionCardText.astro'
+import DescriptionCardExampleLink from '../../../components/DescriptionCardExampleLink.astro'
+---
+
+<Layout title="JS Cheat Sheet | forEach()">
+    <BackButton className="back-button" id="back_button" href="../../second_semester" buttonText="Til oversigt"/>
+
+    <div class="container desc-container">
+        <DescriptionCard class="card what-card">
+            <div class="card what-card">
+                <DescriptionCardHeader class="what-header" headerText="forEach()"/>
+
+                <DescriptionCardText>
+                    <span class="method">.forEach</span><span class="parentheses">()</span> er en type af loop.
+                    Det vil sige, at det kører det antal gange, der er angivet. I tilfældet med <span class="method">.forEach</span><span class="parentheses">()</span>
+                    er det som regel antallet af elementer i et <span class="array">array</span>, der afgør, hvor mange gange, loopet skal køre (antal elementer = antal gange, loopet skal køre).
+                    Det specielle ved <span class="method">.forEach</span><span class="parentheses">()</span> er, at det også kan bruges på en <span class="array">NodeList</span>, som er det <span class="method">.querySelectorAll</span><span class="parentheses">()</span> returnerer.
+                    Se eksempel på brug af <span class="method">.forEach</span><span class="parentheses">()</span> ved både <span class="array">arrays</span> og <span class="array">NodeLists</span> <DescriptionCardExampleLink linkText="her." href="https://codepen.io/Schweitz/pen/BagRLWv" target="_blank" />
+                </DescriptionCardText>
+            </div>
+        </DescriptionCard>
+
+        <DescriptionCard class="card syntax-card">
+            <div class="card syntax-card">
+                <DescriptionCardHeader class="syntax-header" headerText="Syntaks" />
+
+                <DescriptionCardText>
+                    Syntaksen er ret lige til. Man har sin <span class="name">variabel</span>, som er sat til at være lig med enten et <span class="array">array</span> eller <span class="object">document</span><span class="method">.querySelectorAll</span><span class="parentheses">()</span>.
+                    Man skriver så <span class="name">variabelnavnet</span> efterfulgt af <span class="method">.forEach</span><span class="parentheses">()</span>. Inde i <span class="parentheses">parenteserne</span> skriver man navnet på den <span class="keyword">funktion</span>, der skal kaldes for hvert element i <span class="array">NodeListen</span>/<span class="array">arrayet</span>, hvorefter <span class="keyword">funktionen</span> så deklareres.
+                </DescriptionCardText>
+            </div>
+
+            <CodePreviewCard>
+                <h3>
+                    <pre>
+                        <span class="keyword">const</span> <span class="name">elements</span> <span class="equal">=</span> <span class="object">document</span><span class="method">.querySelectorAll</span><span class="parentheses">(</span><span class="quote">'</span>.element<span class="quote">'</span><span class="parentheses">)</span>
+
+                        <span class="keyword">elements</span><span class="method">.forEach</span><span class="parentheses">(</span><span class="name">sayHello</span><span class="parentheses">)</span>
+
+                        <span class="keyword">function</span> <span class="name">sayHello</span><span class="parentheses">(<span class="name">parameter</span>)</span>
+                        <span class="curly-brackets">&#123;</span>
+                        &nbsp;&nbsp;// Kode her
+                        <span class="curly-brackets">&#125;</span>
+                    </pre>
+                </h3>
+            </CodePreviewCard>
+        </DescriptionCard>
+    </div>
+</Layout>
+
+<style>
+    h3
+    {
+        font-size: 18px;
+    }
+</style>

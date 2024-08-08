@@ -1,0 +1,67 @@
+---
+import Layout from '../../../layouts/Layout.astro'
+import BackButton from '../../../components/BackButton.astro'
+import DescriptionCard from '../../../components/DescriptionCard.astro'
+import CodePreviewCard from '../../../components/CodePreviewCard.astro'
+import DescriptionCardHeader from '../../../components/DescriptionCardHeader.astro'
+import DescriptionCardText from '../../../components/DescriptionCardText.astro'
+import DescriptionCardExampleLink from '../../../components/DescriptionCardExampleLink.astro'
+---
+
+<Layout title="JS Cheat Sheet | Attributter">
+    <BackButton className="back-button" id="back_button" href="../../second_semester" buttonText="Til oversigt"/>
+
+    <div class="container desc-container">
+        <DescriptionCard class="card what-card">
+            <div class="card what-card">
+                <DescriptionCardHeader class="what-header" headerText="Attributter"/>
+
+                <DescriptionCardText>
+                    <span class="attribute">Attributter</span> er de ting, man kan sætte på et element som for eksempel en <span class="attribute">klasse</span>, <span class="attribute">id</span>, <span class="attribute">href</span> med videre. 
+                    Man kan enten sætte dem direkte på elementet i HTML'en, eller man kan sætte attributterne dynamisk via JavaScript og dernæst få fat på dem via JavaScript også.
+                    Til at sætte og fat på en attribut bruges henholdsvis <span class="method">.setAttribute</span><span class="parentheses">()</span> og <span class="method">.getAttribute</span><span class="parentheses">()</span>.
+                    Der kan findes uddybende forklaringer og eksempler <DescriptionCardExampleLink href="https://codepen.io/Schweitz/pen/bGPgPeK" linkText="her." target="_blank"/>
+                </DescriptionCardText>
+            </div>
+        </DescriptionCard>
+
+        <DescriptionCard class="card syntax-card">
+            <div class="card syntax-card">
+                <DescriptionCardHeader class="syntax-header" headerText="Syntaks" />
+
+                <DescriptionCardText>
+                    Syntaksen for <span class="method">.setAttribute</span><span class="parentheses">()</span> er, at den sættes på den variabel, som referer til det element, man ønsker at sætte en attribut på.
+                    Denne metode tager to parametre (begge i <span class="quotes">citationstegn</span>), hvoraf det første er den attribut, man ønsker at sætte på elementet, dernæst et komma og til sidst værdien af attributen.
+                    <span class="method">.getAttribute<span class="parentheses">()</span></span> tager derimod kun et parameter, som er navnet på den attribut, som man har sat på elementet. 
+                </DescriptionCardText>
+            </div>
+
+            <CodePreviewCard>
+                <h3>
+                    <pre>
+  // Tager fat på elementet
+  <span class="keyword">const</span> <span class="name">div</span> <span class="equal">=</span>
+  <span class="object">document</span><span class="method">.querySelector</span><span class="parentheses">(</span><span class="quote">'</span><span class="element">div</span><span class="quote">'</span><span class="parentheses">)</span>
+            
+  // Giver den klassen "square"
+  <span class="name">div</span><span class="method">.setAttribute</span><span class="parentheses">(</span><span class="quote">'</span><span class="attribute">class</span><span class="quote">'</span>, <span class="quote">'</span><span class="value">square</span><span class="quote">'</span><span class="parentheses">)</span>
+
+  // Tager fat på klasseattributten
+  <span class="name">div</span><span class="method">.getAttribute</span><span class="parentheses">(</span><span class="quote">'</span><span class="attribute">class</span><span class="quote">'</span><span class="parentheses">)</span>
+                    </pre>
+                </h3>
+            </CodePreviewCard>
+        </DescriptionCard>
+    </div>
+</Layout>
+
+<style>
+    h3
+    {
+        font-size: 18px;
+    }
+    pre
+    {
+        white-space: pre;
+    }
+</style>

@@ -1,0 +1,50 @@
+---
+import Layout from '../../../layouts/Layout.astro'
+import BackButton from '../../../components/BackButton.astro'
+import DescriptionCard from '../../../components/DescriptionCard.astro'
+import CodePreviewCard from '../../../components/CodePreviewCard.astro'
+import DescriptionCardHeader from '../../../components/DescriptionCardHeader.astro'
+import DescriptionCardText from '../../../components/DescriptionCardText.astro'
+import DescriptionCardExampleLink from '../../../components/DescriptionCardExampleLink.astro'
+---
+
+<Layout title="JS Cheat Sheet | Arrays">
+    <BackButton className="back-button" id="back_button" href="../../second_semester" buttonText="Til oversigt"/>
+
+    <div class="container desc-container">
+        <DescriptionCard class="card what-card">
+            <div class="card what-card">
+                <DescriptionCardHeader class="what-header" headerText="Arrays"/>
+
+                <DescriptionCardText>
+                    <span class="array">Arrays</span> er en måde at opbevare flere værdier på i en <span class="name">variabel</span> og en måde at gøre sin kode mere overskuelig på og nemmere at arbejde med. Et <span class="array">array</span> består af <span class="element">elementer</span>.
+
+
+                    Et eksempel kan være, at man gerne vil have alle sine familiemedlemmer listet. I stedet for at oprette en <span class="name">variabel</span>
+                    til hvert medlem er det nemmere at have dem alle samlet i et <span class="array">array</span>, som fungerer som en liste.
+                </DescriptionCardText>
+            </div>
+        </DescriptionCard>
+
+        <DescriptionCard class="card syntax-card">
+            <div class="card syntax-card">
+                <DescriptionCardHeader class="syntax-header" headerText="Syntaks" />
+
+                <DescriptionCardText>
+                    Arrays bliver altid sat til at være lig med en variabel. Syntaksen er derfor, at man først starter med <span class="keyword">const</span> efterfulgt af <span class="name">variabelnavnet</span> og et lighedstegn.
+                    Derefter kommer et sæt firkantede parenteser <span class="square-brackets">[&nbsp;]</span>, og inde i disse er elementerne.
+                    Der er mere til et array, som for eksempel hvordan man får fat på elementerne, <DescriptionCardExampleLink href="https://codepen.io/Schweitz/pen/NWZdwMJ" target="_blank" linkText="her." />
+                </DescriptionCardText>
+            </div>
+
+            <CodePreviewCard>
+                <h3>
+                    <pre>
+                        <span class="keyword">const</span> <span class="name">familyMembers</span> <span class="equal">=</span>
+                        <span class="square-brackets">[</span><span class="quote">'</span>Far<span class="quote">'</span>, <span class="quote">'</span>Mor<span class="quote">'</span>, <span class="quote">'</span>Lillesøster<span class="quote">'</span>, <span class="quote">'</span>Storebror<span class="quote">'</span><span class="square-brackets">]</span>
+                    </pre>
+                </h3>
+            </CodePreviewCard>
+        </DescriptionCard>
+    </div>
+</Layout>

@@ -1,0 +1,59 @@
+---
+import Layout from '../../../layouts/Layout.astro'
+import BackButton from '../../../components/BackButton.astro'
+import DescriptionCard from '../../../components/DescriptionCard.astro'
+import CodePreviewCard from '../../../components/CodePreviewCard.astro'
+import DescriptionCardHeader from '../../../components/DescriptionCardHeader.astro'
+import DescriptionCardText from '../../../components/DescriptionCardText.astro'
+import DownloadButton from '../../../components/DownloadButton.astro'
+---
+
+<Layout title="JS Cheat Sheet | Fetch">
+    <BackButton className="back-button" id="back_button" href="../../second_semester" buttonText="Til oversigt"/>
+
+    <div class="container desc-container">
+        <DescriptionCard class="card what-card">
+            <div class="card what-card">
+                <DescriptionCardHeader class="what-header" headerText="Fetch"/>
+
+                <DescriptionCardText>
+                    <span class="method">Fetch</span> er den indbyggede JavaScript-funktion,
+                    som man bruger til at hente data fra andre hjemmesider eller en database og ind på sin egen side via en <span class="url">URL</span>.
+                    Dette gør det nemmere at lave dynamiske sider, uden man skal til at loade siden hver gang for at opdatere indholdet.
+                </DescriptionCardText>
+            </div>
+        </DescriptionCard>
+
+        <DescriptionCard class="card syntax-card">
+            <div class="card syntax-card">
+                <DescriptionCardHeader class="syntax-header" headerText="Syntaks" />
+
+                <DescriptionCardText>
+                    Syntaksen for <span class="method">fetch</span> består på 2.-semestersniveau af en række trin, der er lidt for langt til at blive skrevet her,
+                    så det gås der i detaljer med i eksemplet, der kan downloades <DownloadButton
+                    href="/public/zips/fetch-eksempel.zip"
+                    class="btn zip-file-download-btn"
+                    id="zip_file_download_btn"
+                    download="fetch-eksempel"
+                >
+                her. 
+                </DescriptionCardText>
+            </div>
+
+            <CodePreviewCard>
+                <h3>
+                    <pre>
+                        <span class="method">fetch</span><span class="parentheses">(<span class="url">url</span>)</span>
+                    </pre>
+                </h3>
+            </CodePreviewCard>
+        </DescriptionCard>
+    </div>
+</Layout>
+
+<style>
+    h3
+    {
+        font-size: 25px;
+    }
+</style>

@@ -1,0 +1,64 @@
+---
+import Layout from '../../../layouts/Layout.astro'
+import BackButton from '../../../components/BackButton.astro'
+import DescriptionCard from '../../../components/DescriptionCard.astro'
+import CodePreviewCard from '../../../components/CodePreviewCard.astro'
+import DescriptionCardHeader from '../../../components/DescriptionCardHeader.astro'
+import DescriptionCardText from '../../../components/DescriptionCardText.astro'
+import DownloadButton from '../../../components/DownloadButton.astro'
+---
+
+<Layout title="JS Cheat Sheet | Template">
+    <BackButton className="back-button" id="back_button" href="../../second_semester" buttonText="Til oversigt"/>
+
+    <div class="container desc-container">
+        <DescriptionCard class="card what-card">
+            <div class="card what-card">
+                <DescriptionCardHeader class="what-header" headerText="Template"/>
+
+                <DescriptionCardText>
+                    <span class="element">Template</span> er et <span class="element">HTML-element</span>, der fungerer som en pladsholder for noget indhold, der kommer fra JavaScripten.
+                    Derfor kan indholdet i <span class="element">template-elementet</span> ikke ses, førend det er blevet genereret via JavaScript.
+                    For at få indholdet vist skal man bruge lidt forskellige metoder, nemlig <span class="method">.cloneNode<span class="parentheses">()</span></span> og <span class="method">.append</span><span class="parentheses">()</span> eller <span class="method">.appendChild</span><span class="parentheses">()</span> samt <span class="property">.content</span>.
+                    Hvordan det ser ud, kan der downloades et eksempel på <DownloadButton
+                    href="/public/zips/template-eksempel.zip"
+                    class="btn zip-file-download-btn"
+                    id="zip_file_download_btn"
+                    download="template-eksempel"
+                >
+                her.
+                </DescriptionCardText>
+            </div>
+        </DescriptionCard>
+
+        <DescriptionCard class="card syntax-card">
+            <div class="card syntax-card">
+                <DescriptionCardHeader class="syntax-header" headerText="Syntaks" />
+
+                <DescriptionCardText>
+                    Syntaksen er forholdsvis simpel, da det består af et åben- og lukke-element med indhold i - fuldstændigt ligesom de fleste andre HTML-elementer.
+                </DescriptionCardText>
+            </div>
+
+            <CodePreviewCard>
+                <h3>
+                    <pre>
+
+
+                    <span class="element">&lt;template&gt;</span>
+                    &nbsp;&nbsp;// Indhold her
+                    <span class="element">&lt;/template&gt;</span>
+
+                    </pre>
+                </h3>
+            </CodePreviewCard>
+        </DescriptionCard>
+    </div>
+</Layout>
+
+<style>
+    h3
+    {
+        font-size: 22px;
+    }
+</style>

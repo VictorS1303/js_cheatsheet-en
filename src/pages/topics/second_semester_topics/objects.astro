@@ -1,0 +1,53 @@
+---
+import Layout from '../../../layouts/Layout.astro'
+import BackButton from '../../../components/BackButton.astro'
+import DescriptionCard from '../../../components/DescriptionCard.astro'
+import CodePreviewCard from '../../../components/CodePreviewCard.astro'
+import DescriptionCardHeader from '../../../components/DescriptionCardHeader.astro'
+import DescriptionCardText from '../../../components/DescriptionCardText.astro'
+import DescriptionCardExampleLink from '../../../components/DescriptionCardExampleLink.astro'
+---
+
+<Layout title="JS Cheat Sheet | Objekter">
+    <BackButton className="back-button" id="back_button" href="../../second_semester" buttonText="Til oversigt"/>
+
+    <div class="container desc-container">
+        <DescriptionCard class="card what-card">
+            <div class="card what-card">
+                <DescriptionCardHeader class="what-header" headerText="Objekter"/>
+
+                <DescriptionCardText>
+                    <span class="object">Objekter</span> er en måde at gruppere information, der alle hører til den samme ting, på.
+                    Tænk på en person. Denne har blandt andet et køn, en alder, og et navn. I stedet for at oprette en <span class="name">variabel</span> 
+                    til hver oplysning, er det bedre og mere overskueligt at have det hele stående i et <span class="object">objekt</span>.
+                </DescriptionCardText>
+            </div>
+        </DescriptionCard>
+
+        <DescriptionCard class="card syntax-card">
+            <div class="card syntax-card">
+                <DescriptionCardHeader class="syntax-header" headerText="Syntaks" />
+
+                <DescriptionCardText>
+                    <span class="object">Objekter</span> bliver altid sat til at være lig med en variabel. Syntaksen er derfor, at man først starter med <span class="keyword">const</span> efterfulgt af <span class="name">variabelnavnet</span> og et lighedstegn.
+                    Derefter kommer et sæt <span class="curly-brackets">tuborgparenteser</span>, og inde i disse er <span class="object-key">key</span>/<span class="value">value</span>-parrene.
+                    <span class="key">Keyen</span> kommer først, dernæst et <span class="colon">kolon</span> og til sidst <span class="value">værdien</span>, som efterfølges af et komma.
+                    Der er mere til et <span class="object">objekt</span>, som for eksempel hvordan man får fat på <span class="object-key">key</span>/<span class="value">value</span>-parrene inde i det, <DescriptionCardExampleLink href="https://codepen.io/Schweitz/pen/poXRZVM" target="_blank" linkText="her." />
+                </DescriptionCardText>
+            </div>
+
+            <CodePreviewCard>
+                <h3>
+                    <pre>
+                        <span class="keyword">const</span> <span class="name">person</span> <span class="equal">=</span>
+                        <span class="curly-brackets">&#123;</span>
+                        &nbsp;&nbsp; <span class="object-key">forNavn</span><span class="colon">:</span> <span class="value">"Victor"</span>,
+                        &nbsp;&nbsp; <span class="object-key">alder</span><span class="colon">:</span> <span class="value">24</span>,
+                        &nbsp;&nbsp; <span class="object-key">køn</span><span class="colon">:</span> <span class="value">"mand"</span>,
+                        <span class="curly-brackets">&#125;</span>
+                    </pre>
+                </h3>
+            </CodePreviewCard>
+        </DescriptionCard>
+    </div>
+</Layout>
