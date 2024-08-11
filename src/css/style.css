@@ -50,10 +50,11 @@
     /* Second Semester */
     --array-text-color: #f957a8;
     --square-brackets-text-color: #d03a85;
-    --object-key-text-color: lightgreen;
+    --object-key-text-color: #90ee90;
     --colon-text-color: #7bdada;
     --attribute-text-color: #ffb964;
     --url-text-color: #cdcdcd;
+    --parameter-text-color: #f00;
 
 
     /* Radii */
@@ -244,6 +245,12 @@ li
     .url
     {
         color: var(--url-text-color);
+    }
+    
+    .parameter
+    {
+        
+        color: var(--parameter-text-color);
     }
 
 }

@@ -1,3 +1,7 @@
+---
+    const currentPage = new URL(Astro.request.url).pathname
+---
+
 <i class="fas fa-bars btn mobile-menu-toggle-btn" id="mobile_menu_toggle_btn"></i>
 
 <nav class="main-nav" id="main_nav">
@@ -8,10 +12,10 @@
     </a>
     <ul>
         <li>
-            <a href="first_semester.html">1. semester</a>
+            <a href="first_semester.html" class={currentPage === "/first_semester.html" ? "active" : ""}>1. semester</a>
         </li>
         <li>
-            <a href="second_semester.html">2. semester</a>
+            <a href="second_semester.html" class={currentPage === "/second_semester.html" ? "active" : ""}>2. semester</a>
         </li>
     </ul>
 </nav>
@@ -53,12 +57,6 @@
         transition: right .4s ease-in;
    }
 
-   nav.active
-   {
-        right: 0;
-        transition: right .4s ease-in;
-   }
-
    nav h1
    {
         position: absolute;
@@ -88,6 +86,11 @@
         font-family: 'Noto Sans', sans-serif;
         position: relative;
         color: #fff;
+   }
+
+   nav ul li a.active
+   {
+        border-bottom: 2px solid #ff0;
    }
 
    nav ul li a::before
@@ -174,4 +177,7 @@
             mobileMenuToggleBtn.classList.remove('fa-times')
         }
     }
+
+    // Update active state
+
 </script>

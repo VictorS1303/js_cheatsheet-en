@@ -18,9 +18,20 @@ const { className, id, href, buttonText } = Astro.props
         transition: .15s ease-in;
     }
 
-    a:hover
+    a::before
     {
-        color: #ff0;
-        transition: .15s ease-in;
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        height: 2px;
+        width: 0;
+        background-color: #ff0;
+        transition: width .2s ease-in;
+    }
+
+    a:hover::before
+    {
+        width: 100%;
+        transition: width .2s ease-in;
     }
 </style>

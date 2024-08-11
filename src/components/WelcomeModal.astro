@@ -1,0 +1,48 @@
+---
+import ModalCloseButton from '../components/ModalCloseButton.astro'
+---
+
+<div class="modal welcome-modal">
+    <ModalCloseButton/>
+    <h1>Hey!</h1>
+</div>
+
+<style>
+    .welcome-modal
+    {
+        position: absolute;
+        top: -50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 550px;
+        width: 700px;
+        border-radius: var(--base-border-radius);
+        background-color: var(--modal-background-color);
+        transition: top .4s ease-in;
+    }
+
+    .welcome-modal.active
+    {
+        top: 50%;
+        transition: top .4s ease-in;
+    }
+</style>
+
+<script>
+    const welcomeModal = document.querySelector('.welcome-modal')
+    const modalCloseButton = document.querySelector('.modal-close-btn')
+
+    console.log(welcomeModal, modalCloseButton)
+
+    modalCloseButton.addEventListener('click', closeWelcomeModal)
+
+    function closeWelcomeModal()
+    {
+        console.log('123')
+        welcomeModal.classList.remove('active')
+    }
+
+    setTimeout(() => {
+        welcomeModal.classList.add('active')
+    }, 1100)
+</script>
