@@ -6,11 +6,16 @@ import CodePreviewCard from '../../../components/CodePreviewCard.astro'
 import DescriptionCardHeader from '../../../components/DescriptionCardHeader.astro'
 import DescriptionCardText from '../../../components/DescriptionCardText.astro'
 import DescriptionCardExampleLink from '../../../components/DescriptionCardExampleLink.astro'
+import TopicPageNavbar from '../../../components/TopicPageNavbar.astro'
 ---
 
 <Layout title="JS Cheat Sheet | Sammenlignende operatorer">
-    <BackButton className="back-button" id="back_button" href="../../first_semester" buttonText="Til oversigt"/>
-
+    <TopicPageNavbar>
+        <h1 class="logo">
+            <span>JS</span> Cheat Sheet
+        </h1>
+        <BackButton className="back-button" id="back_button" href="../../first_semester" buttonText="Til oversigt"/>
+    </TopicPageNavbar>
     <div class="container desc-container">
         <DescriptionCard class="card what-card">
             <div class="card what-card">

@@ -68,7 +68,7 @@
 body
 {
     background-color: var(--body-background-color);
-    overflow: hidden;
+    overflow-y: hidden;
 }
 
 li
@@ -118,6 +118,7 @@ li
     color: #fff;
     border-bottom: 2px solid #fff;
 }
+
 
 @media screen and (min-width: 768px)
 {

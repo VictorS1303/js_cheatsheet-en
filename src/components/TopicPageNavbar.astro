@@ -1,24 +1,19 @@
-<nav class="topic-page-nav" id="topic_page_nav">
+---
+import BackButton from './BackButton.astro'
+---
 
-    <slot/>
+<nav class="topic-page-nav" id="topic_page_nav">
+    <BackButton className="back-button" id="back_button" href="../../first_semester" buttonText="Til oversigt"/>
 </nav>
 
 
 <style>
-    nav
+    .topic-page-nav
    {
-        display: grid;
-        place-content: center;
-        position: absolute;
-        right: -200px;
-        height: 100vh;
-        width: 200px;
-        background-color: var(--mobile-header-background-color);
-        z-index: 100;
-        transition: right .4s ease-in;
+        display: flex;
    }
 
-   nav h1
+   .topic-page-nav h1
    {
         position: absolute;
         bottom: 20px;
@@ -27,7 +22,7 @@
         white-space: nowrap;
    }
 
-   nav h1 span
+   .topic-page-nav h1 span
    {
         color: #ff0;
    }

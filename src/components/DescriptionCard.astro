@@ -14,13 +14,17 @@ const { class: className } = Astro.props;
         left: 50%;
         transform: translate(-50%, -50%);
         display: flex;
-        gap: 80px;
+        gap: 100px;
         flex-direction: column;
         justify-content: space-between;
-        width: 50vw;
-        height: 70vh;
-        padding-top: 60px;
+        width: 60vw;
+        height: 400px;
         overflow: hidden scroll;
+    }
+
+    .container.desc-container > *
+    {
+        flex-basis: 1;
     }
 
     .container.desc-container > div
@@ -42,21 +46,6 @@ const { class: className } = Astro.props;
         margin-top: auto;
     }
 
-
-    @media screen and (max-width: 767px)
-    {
-        .selectors-desc-container > div:last-child
-        {
-            margin-top: 230px;
-        }
-
-        .variables-contants-desc-container > div:last-child
-        {
-            margin-top: 200px;
-        }
-    }
-    
-
     @media screen and (min-width: 768px)
     {
         .container.desc-container
@@ -64,8 +53,15 @@ const { class: className } = Astro.props;
             flex-direction: row;
             gap: 60px;
             overflow: hidden;
+            height: auto;
+            max-height: 500px;
         }
 
+        .container.desc-container > *
+        {
+            max-height: 500px;
+        }
+        
         .container.desc-container > .card
         {
             flex: 1;

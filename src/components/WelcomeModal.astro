@@ -4,7 +4,21 @@ import ModalCloseButton from '../components/ModalCloseButton.astro'
 
 <div class="modal welcome-modal">
     <ModalCloseButton/>
-    <h1>Hey!</h1>
+
+    <img src="public/welcome_modal_image/modal_image.webp" alt="">
+    <div class="container welcome-modal-content-container">
+        <div class="container welcome-modal-text-container">
+            <p>
+                Hej, jeg hedder Victor Schweitz, og det er mig, der står bag denne side.
+                Denne side er tiltænkt som et uddybende cheat sheet/læringsside.
+                Emnerne kommer mere eller mindre i den rækkefølge, som de gør i undervisningen.
+                Derfor anbefales det også at tage emnerne i den rækkefølge, som de kommer, da det antages,
+                i de kommende emner, at man har forstået koncepterne fra de forrige.
+                <br />
+                Har du spørgsmål til emnerne eller andre problemer med kodning generelt, er du mere end velkommen til at skrive til mig på <a href="https://www.facebook.com/vschweitz/" target="_blank">facebook</a>. 
+            </p>
+        </div>
+    </div>
 </div>
 
 <style>
@@ -14,10 +28,15 @@ import ModalCloseButton from '../components/ModalCloseButton.astro'
         top: -50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        height: 550px;
-        width: 700px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 340px;
+        height: 800px;
         border-radius: var(--base-border-radius);
         background-color: var(--modal-background-color);
+        z-index: 500;
         transition: top .4s ease-in;
     }
 
@@ -26,23 +45,83 @@ import ModalCloseButton from '../components/ModalCloseButton.astro'
         top: 50%;
         transition: top .4s ease-in;
     }
+    
+    .welcome-modal img
+    {
+        height: 150px;
+        width: 150px;
+        margin-top: 70px;
+        border-radius: calc(var(--base-border-radius) * 50);
+        object-fit: cover;
+    }
+
+    .container.welcome-modal-content-container
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 20px;
+        padding: 20px;
+        text-align: left;
+        overflow-x: scroll;
+    }
+
+    .container.welcome-modal-content-container header h2 span
+    {
+        color: #ff0;
+    }
+
+    .container.welcome-modal-text-container p
+    {
+        margin-top: 30px;
+        font-size: 18px;
+    }
+
+    .container.welcome-modal-text-container p > *
+    {
+        color: inherit;
+    }
+
+    .container.welcome-modal-text-container p a
+    {
+        border-bottom: 2px dashed #fff;
+    }
+
+    .container.welcome-modal-text-container p a:hover
+    {
+        border-bottom-style: solid;
+    }
+
+    @media screen and (min-width: 768px)
+    {
+        .welcome-modal
+        {
+            max-height: 600px;
+            width: 700px;
+        }
+
+    }
 </style>
 
 <script>
-    const welcomeModal = document.querySelector('.welcome-modal')
-    const modalCloseButton = document.querySelector('.modal-close-btn')
+    const welcomeModal = document.querySelector('.welcome-modal') as HTMLElement
+    const modalCloseButton = document.querySelector('.welcome-modal .modal-close-btn')
 
-    console.log(welcomeModal, modalCloseButton)
-
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            openWelcomeModal()
+        }, 1100)
+    })
     modalCloseButton.addEventListener('click', closeWelcomeModal)
+
 
     function closeWelcomeModal()
     {
-        console.log('123')
         welcomeModal.classList.remove('active')
     }
 
-    setTimeout(() => {
-        welcomeModal.classList.add('active')
-    }, 1100)
+    function openWelcomeModal()
+    {
+        welcomeModal.classList.add('active')       
+    }
 </script>
