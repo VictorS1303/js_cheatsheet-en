@@ -1,6 +1,15 @@
+---
+import {data} from '../lib/fetch.js'
+
+console.log(data)
+---
+
 <p class="hero-paragraph" id="hero_paragraph">
-    En JavaScript-oversigt <br/>
-    for 1. og 2. semester på MMD 
+    {
+        data.map((heroParagraphText) => (
+            <pre><span>{heroParagraphText.hero_paragraph_text}</span></pre>
+        ))
+    }
 </p>
 
 <style>
@@ -8,5 +17,13 @@
     {
         font-style: italic;
         margin-top: 10px;
+    }
+
+    pre
+    {
+        font-family: inherit;
+        font-size: 20px;
+        font-style: italic;
+        color: #fff;
     }
 </style>

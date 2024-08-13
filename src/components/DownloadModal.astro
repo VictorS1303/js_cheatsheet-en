@@ -1,32 +1,26 @@
 ---
-import Modal from "./Modal.astro";
-import DownloadButton from "./DownloadButton.astro";
+import {data} from '../lib/fetch.js'
 
+import Modal from "./Modal.astro"
+import DownloadButton from "./DownloadButton.astro"
 ---
 
 <Modal className="modal download-modal">
-     <div>
-        <img src="public/thumbnails/foerste_semester_thumbnail.webp" />
-        <DownloadButton
-            href="public/pdfs/foerste_semester_pdf.pdf"
-            class="modal-download-btn"
-            id="modal_download_btn"
-            download="foerste_semester_pdf"
-        >
-            1. semester <i class="fas fa-download"></i>
-        </DownloadButton>
-    </div>
-    <div>
-        <img src="public/thumbnails/andet_semester_thumbnail.webp" />
-        <DownloadButton
-            href="public/pdfs/andet_semester_pdf.pdf"
-            class="modal-download-btn"
-            id="modal_download_btn"
-            download="andet_semester_pdf"
-        >
-            2. semester <i class="fas fa-download"></i>
-        </DownloadButton>
-    </div>
+    {
+        data.map((pdfDownloads) => (
+            <div>
+                <img src={pdfDownloads.pdf_thumbnails} />
+                <DownloadButton
+                    href={pdfDownloads.pdf_download_button_href}
+                    class="modal-download-btn"
+                    id="modal_download_btn"
+                    download={pdfDownloads.pdf_download_name}
+                >
+                    {pdfDownloads.pdf_download_buttons_text} <i class="fas fa-download"></i>
+                </DownloadButton>
+            </div>
+        ))
+    }
 </Modal>
 
 <style>

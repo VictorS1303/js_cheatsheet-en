@@ -1,7 +1,21 @@
 ---
+import {data} from '../lib/fetch.js'
 import Button from './Button.astro'
+console.log(data)
 ---
 
 <Button className="modal-open-button">
-    Code Examples <i class="fas fa-download"></i>
+    {
+        data.map((downloadModalOpenButton) => (
+            <span>{downloadModalOpenButton.download_modal_open_button_text}</span>
+        ))
+    }
+    <i class="fas fa-download"></i>
 </Button>
+
+<style>
+    .modal-open-button
+    {
+        width: 100px;
+    }
+</style>

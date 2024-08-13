@@ -1,5 +1,16 @@
+---
+import {data} from '../lib/fetch.js'
+
+console.log(data)
+---
+
     <h3 class="creator" id="creator">
-        Lavet af: Victor Schweitz
+        Lavet af:
+        {
+            data.map((creator) => (
+                <span>{creator.creator}</span>
+            ))
+        }
     </h3>
 
 <style>

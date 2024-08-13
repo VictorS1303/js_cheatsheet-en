@@ -1,91 +1,23 @@
 ---
-const cardsData =
-[
-    {
-        cardURL: 'first_semester_topics/functions',
-        cardFrontText: 'Funktioner',
-        cardBackText: 'function myFunction()',
-        topicNumber: 1,
-    },
-    {
-        cardURL: 'first_semester_topics/variables_constants',
-        cardFrontText: 'Variable/Konstante',
-        cardBackText: 'var, let, const',
-        topicNumber: 2
-    },
-    {
-        cardURL: 'first_semester_topics/selectors',
-        cardFrontText: 'Selectors',
-        cardBackText: 'Klasser, ID\'er & elementer',
-        topicNumber: 3
-    },
-    {
-        cardURL: 'first_semester_topics/events',
-        cardFrontText: 'Eventlisteners',
-        cardBackText: '.addEventListener()',
-        topicNumber: 4
-    },
-    {
-        cardURL: 'first_semester_topics/classes',
-        cardFrontText: 'Klassemanipulation',
-        cardBackText: '.add(), .remove(), .toggle()',
-        topicNumber: 5
-    },
-    {
-        cardURL: 'first_semester_topics/timers',
-        cardFrontText: 'Timers',
-        cardBackText: 'setInterval()/setTimeout()',
-        topicNumber: 6
-    },
-    {
-        cardURL: 'first_semester_topics/random',
-        cardFrontText: 'Tilfældighed',
-        cardBackText: 'Math.random()',
-        topicNumber: 7
-    },
-    {
-        cardURL: 'first_semester_topics/operands',
-        cardFrontText: 'Sammenlignende operatorer',
-        cardBackText: '<, >, <=, >=, ||, &&, =, ==',
-        topicNumber: 8
-    },
-    {
-        cardURL: 'first_semester_topics/conditions',
-        cardFrontText: 'Forhold',
-        cardBackText: 'if',
-        topicNumber: 9
-    },
-    {
-        cardURL: 'first_semester_topics/console',
-        cardFrontText: 'Konsollen',
-        cardBackText: 'console.log()',
-        topicNumber: 10
-    },
-    {
-        cardURL: 'first_semester_topics/sound',
-        cardFrontText: 'Lyd',
-        cardBackText: '.play(), .pause(), .muted,\n .volume, .duration, .currentTime',
-        topicNumber: 11
-    },
-]
+import {data} from '../lib/fetch.js'
 ---
 
 <>
     {
-        cardsData.map((card) =>
+        data.map((topicCard) =>
         (
-                <a href=`topics/${card.cardURL}`>
+                <a href={topicCard.first_semester_topic_cards_url}>
                     <div class="card topic-card">
                         <div class="inner-card">
                             <div class="front-card">
-                                <h2>{card.cardFrontText}</h2>
+                                <h2>{topicCard.first_semester_topic_cards_front}</h2>
                             </div>
                             <div class="back-card">
-                                <h2>{card.cardBackText}</h2>
+                                <h2>{topicCard.first_semester_topic_cards_back}</h2>
                             </div>
                         </div>
                     </div> 
-                    <h3 class="topic-title"><span class="topic-number">{card.topicNumber}.</span>&nbsp;&nbsp;{card.cardFrontText}</h3>
+                    <h3 class="topic-title"><span class="topic-number">{topicCard.first_semester_topic_card_numbers}.</span>&nbsp;&nbsp;{topicCard.first_semester_topic_cards_front}</h3>
                 </a>
             )
          

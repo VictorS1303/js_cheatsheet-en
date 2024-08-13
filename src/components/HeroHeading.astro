@@ -1,9 +1,21 @@
 ---
+import {data} from '../lib/fetch.js'
 import Header from './Header.astro'
+console.log(data)
 ---
 
 <Header className="hero-heading" id="hero_heading">
-    <h1><span>JS</span> Cheat Sheet</h1>
+   {
+       <h1>
+         <span class="secondary-heading">JS</span>
+         {
+            data.map((heroHeaderText) => (
+                <span>{heroHeaderText.hero_header_text}</span>
+            ))
+        }
+       </h1>
+   }
+    
 </Header>
 
 <style>
@@ -12,7 +24,7 @@ import Header from './Header.astro'
         font-size: 3rem;
     }
 
-    h1 span
+    h1 span.secondary-heading
     {
         color: var(--secondary-heading-color);
     }

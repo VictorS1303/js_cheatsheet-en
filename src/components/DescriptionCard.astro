@@ -1,5 +1,6 @@
 ---
 const { class: className } = Astro.props;
+import {data} from '../lib/fetch.js'
 ---
 
 <div class:list={`card ${className}`}>
@@ -17,7 +18,7 @@ const { class: className } = Astro.props;
         gap: 100px;
         flex-direction: column;
         justify-content: space-between;
-        width: 60vw;
+        width: 50vw;
         height: 400px;
         overflow: hidden scroll;
     }

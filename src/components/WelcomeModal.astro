@@ -107,11 +107,12 @@ import ModalCloseButton from '../components/ModalCloseButton.astro'
     const welcomeModal = document.querySelector('.welcome-modal') as HTMLElement
     const modalCloseButton = document.querySelector('.welcome-modal .modal-close-btn')
 
-    window.addEventListener('load', () => {
-        setTimeout(() => {
-            openWelcomeModal()
-        }, 1100)
-    })
+    // window.addEventListener('load', () => {
+    //     setTimeout(() => {
+    //         openWelcomeModal()
+    //     }, 1100)
+    // })
+
     modalCloseButton.addEventListener('click', closeWelcomeModal)
 
 
@@ -120,8 +121,8 @@ import ModalCloseButton from '../components/ModalCloseButton.astro'
         welcomeModal.classList.remove('active')
     }
 
-    function openWelcomeModal()
-    {
-        welcomeModal.classList.add('active')       
-    }
+    // function openWelcomeModal()
+    // {
+    //     welcomeModal.classList.add('active')       
+    // }
 </script>
