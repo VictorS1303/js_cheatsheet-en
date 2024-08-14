@@ -1,7 +1,7 @@
 export const firstSemesterTopicCards =
 [
     {
-        cardURL: '../topics/first_semester_topics/functions',
+        cardURL: 'first_semester_topics/functions',
         cardFrontText: 'Funktioner',
         cardBackText: 'function myFunction()',
         topicNumber: 1
