@@ -68,7 +68,7 @@
 body
 {
     background-color: var(--body-background-color);
-    overflow-y: hidden;
+    overflow: hidden;
 }
 
 li
