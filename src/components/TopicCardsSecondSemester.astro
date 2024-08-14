@@ -1,82 +1,29 @@
 ---
-// const cardsData =
-// [
-//     {
-//         cardURL: 'second_semester_topics/arrays',
-//         cardFrontText: 'Arrays',
-//         cardBackText: 'const arr = []',
-//         topicNumber: 1
-//     },
-//     {
-//         cardURL: 'second_semester_topics/objects',
-//         cardFrontText: 'Objekter',
-//         cardBackText: 'const obj = {}',
-//         topicNumber: 2,
-//     },
-//     {
-//         cardURL: 'second_semester_topics/fetch',
-//         cardFrontText: 'Fetch',
-//         cardBackText: 'fetch()',
-//         topicNumber: 3
-//     },
-//     {
-//         cardURL: 'second_semester_topics/query_selector_all',
-//         cardFrontText: 'Selector',
-//         cardBackText: '.querySelectorAll()',
-//         topicNumber: 4
-//     },
-//     {
-//         cardURL: 'second_semester_topics/for_each',
-//         cardFrontText: 'Loop',
-//         cardBackText: '.forEach()',
-//         topicNumber: 5
-//     },
-   
-//     {
-//         cardURL: 'second_semester_topics/template',
-//         cardFrontText: 'Template',
-//         cardBackText: '.cloneNode(), .cloneNode(true),\n .append()/.appendChild()',
-//         topicNumber: 6
-//     },
-//     {
-//         cardURL: 'second_semester_topics/url_parameters',
-//         cardFrontText: 'URL-parametre',
-//         cardBackText: 'URLSearchParams()',
-//         topicNumber: 7
-//     },
-//     {
-//         cardURL: 'second_semester_topics/attributes',
-//         cardFrontText: 'Attributter',
-//         cardBackText: '.getAttribute()/.setAttribute()',
-//         topicNumber: 8
-//     },
-// ]
+import {secondSemesterTopicCards} from '../topic_cards_data/second_semester_topic_cards.js'
 
-import {data} from '../lib/fetch.js'
-console.log(data.second_semester_topic_cards_url)
 ---
 
 <>
-{
-    data.map((topicCard) =>
-    (
-            <a href={topicCard.second_semester_topic_cards_url}>
-                <div class="card topic-card">
-                    <div class="inner-card">
-                        <div class="front-card">
-                            <h2>{topicCard.second_semester_topic_cards_front}</h2>
+    {
+        secondSemesterTopicCards.map((secondSemesterTopicCard) =>
+        (
+                <a href=`topics/${secondSemesterTopicCard.cardURL}`>
+                    <div class="card topic-card">
+                        <div class="inner-card">
+                            <div class="front-card">
+                                <h2>{secondSemesterTopicCard.cardFrontText}</h2>
+                            </div>
+                            <div class="back-card">
+                                <h2>{secondSemesterTopicCard.cardBackText}</h2>
+                            </div>
                         </div>
-                        <div class="back-card">
-                            <h2>{topicCard.second_semester_topic_cards_back}</h2>
-                        </div>
-                    </div>
-                </div> 
-                <h3 class="topic-title"><span class="topic-number">{topicCard.second_semester_topic_card_numbers}</span>&nbsp;&nbsp;{topicCard.second_semester_topic_cards_front}</h3>
-            </a>
+                    </div> 
+                    <h3 class="topic-title"><span class="topic-number">{secondSemesterTopicCard.topicNumber}.</span>&nbsp;&nbsp;{secondSemesterTopicCard.cardFrontText}</h3>
+                </a>
+            )
+         
         )
-     
-    )
-} 
+    }  
 </>
 
 

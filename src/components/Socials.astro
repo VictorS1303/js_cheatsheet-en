@@ -1,0 +1,47 @@
+---
+ const socials = ['fa-brands fa-facebook-f']
+ const href = ['https://www.facebook.com/vschweitz']
+
+ const icons = socials.map((socialsIcon, index) => ({
+    socialMediaIcon: socialsIcon,
+    href: href[index]
+}))
+---
+
+<div class="socials-container">
+    {
+        icons.map((icon) => (
+            <a href={icon.href} target="_blank">
+                <i class={icon.socialMediaIcon}></i>
+            </a>      
+        ))
+    }
+</div>
+
+<style>
+    .socials-container
+    {
+        position: absolute;
+        bottom: 20px;
+        left: 50px;
+        font-size: 20px;
+    }
+    i
+    {
+        color: #fff;
+        transition: color .15s ease-in;
+    }
+
+    i:hover
+    {
+        color: #ff0;
+        transition: color .15s ease-in;
+    }
+
+    @media screen and (max-width: 768px)
+    {.socials-container
+        {
+        top: 20px;
+        }
+    }
+</style>

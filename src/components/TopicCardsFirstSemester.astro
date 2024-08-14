@@ -1,23 +1,23 @@
 ---
-import {data} from '../lib/fetch.js'
+  import {firstSemesterTopicCards} from '../topic_cards_data/first_semester_topic_cards.js'
 ---
 
 <>
     {
-        data.map((topicCard) =>
+        firstSemesterTopicCards.map((firstSemesterTopicCards) =>
         (
-                <a href={topicCard.first_semester_topic_cards_url}>
+                <a href=`topics/${firstSemesterTopicCards.cardURL}`>
                     <div class="card topic-card">
                         <div class="inner-card">
                             <div class="front-card">
-                                <h2>{topicCard.first_semester_topic_cards_front}</h2>
+                                <h2>{firstSemesterTopicCards.cardFrontText}</h2>
                             </div>
                             <div class="back-card">
-                                <h2>{topicCard.first_semester_topic_cards_back}</h2>
+                                <h2>{firstSemesterTopicCards.cardBackText}</h2>
                             </div>
                         </div>
                     </div> 
-                    <h3 class="topic-title"><span class="topic-number">{topicCard.first_semester_topic_card_numbers}.</span>&nbsp;&nbsp;{topicCard.first_semester_topic_cards_front}</h3>
+                    <h3 class="topic-title"><span class="topic-number">{firstSemesterTopicCards.topicNumber}.</span>&nbsp;&nbsp;{firstSemesterTopicCards.cardFrontText}</h3>
                 </a>
             )
          

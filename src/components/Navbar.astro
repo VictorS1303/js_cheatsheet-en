@@ -1,9 +1,5 @@
 ---
-import {data} from '../lib/fetch.js'
 const currentPage = new URL(Astro.request.url).pathname
-
-
-console.log(data)
 ---
 
 <i class="fas fa-bars btn mobile-menu-toggle-btn" id="mobile_menu_toggle_btn"></i>
@@ -15,15 +11,13 @@ console.log(data)
         </h1>
     </a>
     <ul>
-        {
-            data.map((mainNavLinksText) => (
-                <li>
-                    <a href={mainNavLinksText.main_nav_links_url}>
-                        {mainNavLinksText.main_nav_links}
-                    </a>
-                </li>
-            ))
-        }
+        <li>
+            <a href="first_semester" class={currentPage === '/first_semester' ? 'active' : ''}>1. semester</a>
+        </li>
+        <li>
+            <a href="second_semester" class={currentPage === '/second_semester' ? 'active' : ''}>2. semester</a>
+        </li>
+      
     </ul>
 </nav>
 

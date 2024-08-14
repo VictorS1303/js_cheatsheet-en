@@ -22,11 +22,8 @@ import TopicPageNavbar from '../../../components/TopicPageNavbar.astro'
                 <DescriptionCardHeader class="what-header" headerText="Timerfunktioner" />
 
                 <DescriptionCardText>
-                    Timerfunktioner kan bruges til at få noget til at ske efter et vist stykke tid eller med bestemte intervaller.
-                    De mest brugte er <span class="method">setTimeout</span> og <span class="method">setInterval</span>.
-                    <span class="method">setTimeout</span> bruges til at køre noget kode efter et bestemt stykke tid er gået, mens <span class="method">setInterval</span> kører et stykke kode
-                    <br/>
-                    om og om igen efter det angivne interval.
+                    Timers bruges til at køre kode efter et bestemt tidsrum eller med faste intervaller. De mest anvendte <span class="method">metoder</span> er <span class="method">setTimeout</span> og <span class="method">setInterval</span>.
+                    <span class="method">setTimeout</span> kører kode efter et bestemt tidsrum, mens <span class="method">setInterval</span> kører kode, hver gang det givne interval er gået.
                 </DescriptionCardText>
             </div>
         </DescriptionCard>
@@ -36,15 +33,27 @@ import TopicPageNavbar from '../../../components/TopicPageNavbar.astro'
                 <DescriptionCardHeader class="syntax-header" headerText="Syntaks" />
 
                 <DescriptionCardText>
-                    Syntaksen er en smule underlig, og for nu er det nok at vide, hvordan de er opbygget.
-                    Heldigvis er syntaksen for både <span class="method">setTimeout</span> og <span class="method">setInterval</span> den nøjagtigt samme, så der er ikke noget svært der.
+                    Syntaksen for <span class="method">setTimeout</span> og <span class="method">setInterval</span> er ens.
 
-                    <span class="method">setTimeout</span> starter med, at man skriver funktionens navn, nemlig <span class="method">setTimeout</span>.
-                    Herefter følger et sæt <span class="parentheses">parenteser</span>, og inde i disse skriver man <span class="keyword">function</span>, som efterfølges af et nyt sæt <span class="parentheses">parenteser</span>. Herefter kommer et sæt <span class="curly-brackets">tuborgparenteser</span>. Inde i disse står den kode, der skal køres (oftest et funktionskald). Mellem den afsluttende <span class="curly-brackets">tuborgklamme</span> og den afsluttende <span class="parentheses">parentes</span> er et komma efterfulgt af det tal i millisekunder, der indikerer, ved hvilket interval funktionen skal køres.
-                    Eksempler på, hvordan de kører samt deres syntaks kan ses <DescriptionCardExampleLink href="https://codepen.io/Schweitz/pen/LYKpZyP" linkText="her." target="_blank"/>
-
+                    Først skrives <span class="name">funktionsnavnet</span> (<span class="method">setInterval</span> eller <span class="method">setTimeout</span>). Dernæst kommer et sæt <span class="parentheses">parenteser</span>, inde i hvilke man skriver <span class="keyword">function</span> efterfulgt af et sæt <span class="parentheses">parenteser</span> og <span class="curly-brackets">tuborgparenteser</span>, inde i hvilke <span class="code">koden</span>, der skal køres, står. Se eksempler <DescriptionCardExampleLink href="https://codepen.io/Schweitz/pen/LYKpZyP" linkText="her." target="_blank"/>
                 </DescriptionCardText>
             </div>
         </DescriptionCard>
+    
     </div>
 </Layout>
+
+<style>
+    .container.desc-container
+    {
+        height: 80dvh;
+    }
+    @media screen and (max-width: 1500px)
+    {
+        .container.desc-container
+        {
+            height: 400px;
+            overflow-x: scroll;
+        }
+    }
+</style>

@@ -22,9 +22,7 @@ import TopicPageNavbar from '../../../components/TopicPageNavbar.astro'
                 <DescriptionCardHeader class="what-header" headerText="Hvad er selectors?" />
 
                 <DescriptionCardText>
-                    En selector bruges til at vælge et bestemt element i ens HTML.
-                    Der er et hav af selectors, men der er tre primære, som man skal kende.
-                    Disse er <span class="class">klasse</span>, <span class="id">id</span> og <span class="element">element</span>, og du kan finde uddybende eksempler til, hvilke JavaScript-metoder man bruger til at vælge elementer baseret på enten <span class="class">klasse</span>, <span class="id">id</span> eller selve <span class="element">elementet</span>, samt hvad forskellen på de tre er, <DescriptionCardExampleLink href="https://codepen.io/Schweitz/pen/BagNqza" linkText="her." target="_blank" />
+                    En selector bruges til at vælge et specifikt element i HTML. De tre primære selectors er <span class="class">klasse</span>, <span class="id">id</span> og selve <span class="element">element</span>. Du kan finde eksempler på de hyppigste JavaScript-metoder til at vælge elementer med førnævnte selectors samt forskellen på dem <DescriptionCardExampleLink href="https://codepen.io/Schweitz/pen/BagNqza" linkText="her." target="_blank" />
                 </DescriptionCardText>
             </div>
         </DescriptionCard>
@@ -33,21 +31,26 @@ import TopicPageNavbar from '../../../components/TopicPageNavbar.astro'
             <div class="card syntax-card">
                 <DescriptionCardHeader class="syntax-header" headerText="Syntaks" />
                 <DescriptionCardText>
-                    Syntaksen for at tilgå elementer i CSS ved brug af enten <span class="class">klasse</span>, <span class="id">id</span> eller <span class="element">elementet</span> selv er forholdsvist simpelt:
-
+                    Syntaksen for at tilgå elementer i CSS er enkel:
                     <br />
-                    
-                    En <span class="class">klasse</span> tilgås i CSS'en med et <span class="class">punktum</span> efterfulgt af <span class="class">klassens</span> navn.
-
                     <br />
-                    Et <span class="id">id</span> tilgås i CSS'en med et <span class="id">#</span> efterfulgt af <span class="id">id</span>'ets navn.
+                    <ul>
+                        <li>
+                            En <span class="class">klasse</span> tilgås med et <span class="class">punktum</span> efterfulgt af <span class="class">klassens</span> navn.
+                        </li>
+                        
+                        <li>
+                            Et <span class="id">id</span> tilgås med et <span class="id">hashtag</span> efterfulgt af <span class="id">id'ets</span> navn.
+                        </li>
 
-                    <br />
-                    Et <span class="element">element</span> tilgås i CSS'en ved at skrive <span class="element">elementets</span> navn.
+                        <li>
+                            Et <span class="element">element</span> tilgås ved at skrive <span class="element">elementets</span> navn uden noget foran. 
+                        </li>
+                    </ul>
                 </DescriptionCardText>
             </div>
 
-            <div class="code-preview-card">
+      
                 <CodePreviewCard>
                     <h3>
                         <pre>
@@ -57,8 +60,23 @@ import TopicPageNavbar from '../../../components/TopicPageNavbar.astro'
                         </pre>
                     </h3>
                 </CodePreviewCard>
-            </div>
         </DescriptionCard>
     </div>
 </Layout>
 
+
+<style>
+    ul
+    {
+        margin-left: 30px;
+    }
+    li
+    {
+        list-style: outside;
+    }
+
+    li:not(:first-child)
+    {
+        margin-top: 15px;
+    }
+</style>

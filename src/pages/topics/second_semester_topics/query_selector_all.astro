@@ -17,11 +17,10 @@ import DescriptionCardExampleLink from '../../../components/DescriptionCardExamp
                 <DescriptionCardHeader class="what-header" headerText="Selector"/>
 
                 <DescriptionCardText>
-                    <span class="method">.querySelectorAll</span><span class="parentheses">()</span> fungerer på samme måde som <span class="method">.querySelector<span class="parentheses">()</span></span>.
-                    Dog er der nogle væsentlige forskelle. Den ene er, at hvor <span class="method">.querySelector</span><span class="parentheses">()</span> kun vælger det første element med den selector, man har givet den,
-                    vælger <span class="method">.querySelectorAll</span><span class="parentheses">()</span> <em><b>alle</b></em> elementer med den selector, man har givet den.
-                    Den anden forskel er, at <span class="method">.querySelectorAll</span><span class="parentheses">()</span> returnerer noget, der hedder en <span class="array">NodeList</span>, som i sagens natur fungerer på samme måde som et <span class="array">array</span>,
-                    hvilket vil sige, at man kan tilgå sine HTML-elementer, som var de i et <span class="array">array</span>. Se eksempel <DescriptionCardExampleLink href="https://codepen.io/Schweitz/pen/bGPqLKW" linkText="her." target="_blank"/>
+                    <span class="method">.querySelectorAll</span><span class="parentheses">()</span> bruges til at tage fat på alle elementer med den angivne selector (fx vil <span class="object">document</span><span class="method">.querySelectorAll</span><span class="parentheses">(</span><span class="quote">'</span>div<span class="quote">'</span><span class="parentheses">)</span> vælge alle <span class="element">div-elementer</span>).
+                    
+                    Se eksempel 
+                    <DescriptionCardExampleLink href="https://codepen.io/Schweitz/pen/bGPqLKW" linkText="her." target="_blank"/>
                 </DescriptionCardText>
             </div>
         </DescriptionCard>
@@ -31,18 +30,16 @@ import DescriptionCardExampleLink from '../../../components/DescriptionCardExamp
                 <DescriptionCardHeader class="syntax-header" headerText="Syntaks" />
 
                 <DescriptionCardText>
-                    Syntaksen er nøjagtigt magen til <span class="method">.querySelector</span><span class="parentheses">()</span>s.
-                    Det vil sige, at først kommer <span class="name">variabelnavnet</span>. Herefter skriver man <span class="method">.querySelectorAll<span class="parentheses">()</span></span>.
+                    Først kommer <span class="name">variabelnavnet</span>. Herefter skriver man <span class="method">.querySelectorAll<span class="parentheses">()</span></span>.
                     Inde i <span class="parentheses">parenteserne</span> er et sæt <span class="quote">citationstegn</span>, som indeholder den selector, man ønsker at vælge.
-                    Man bør ikke give den et <span class="id">id</span>, da et <span class="id">id</span> er unikt for et element, og denne <span class="method">metode</span> vælger alle elementer med en given selector.
                 </DescriptionCardText>
             </div>
 
             <CodePreviewCard>
                 <h3>
                     <pre>
-                        // Vælger alle elementer med klassen "btn"
-                        <span class="keyword">const</span> <span class="name">buttons</span> <span class="equal">=</span> <span class="object">document</span><span class="method">.querySelectorAll</span><span class="parentheses">(</span><span class="quotes">'</span>.btn<span class="quotes">'</span><span class="parentheses">)</span>
+                        // Vælger alle div-elementer
+                        <span class="keyword">const</span> <span class="name">divs</span> <span class="equal">=</span> <span class="object">document</span><span class="method">.querySelectorAll</span><span class="parentheses">(</span><span class="quotes">'</span>div<span class="quotes">'</span><span class="parentheses">)</span>
                     </pre>
                 </h3>
             </CodePreviewCard>

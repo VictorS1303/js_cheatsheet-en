@@ -98,6 +98,10 @@ p
 pre
 {
     white-space: pre-line;
+    font-family: inherit;
+    display: inline-block;
+    font-weight: normal;
+    font-size: 20px;
 }
 
 li
@@ -120,7 +124,7 @@ li
 }
 
 
-@media screen and (min-width: 768px)
+@media screen and (min-width: 1100px)
 {
     .example
     {

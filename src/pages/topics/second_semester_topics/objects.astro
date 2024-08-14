@@ -29,18 +29,16 @@ import DescriptionCardExampleLink from '../../../components/DescriptionCardExamp
                 <DescriptionCardHeader class="syntax-header" headerText="Syntaks" />
 
                 <DescriptionCardText>
-                    <span class="object">Objekter</span> bliver altid sat til at være lig med en variabel. Syntaksen er derfor, at man først starter med <span class="keyword">const</span> efterfulgt af <span class="name">variabelnavnet</span> og et lighedstegn.
-                    Derefter kommer et sæt <span class="curly-brackets">tuborgparenteser</span>, og inde i disse er <span class="object-key">key</span>/<span class="value">value</span>-parrene.
-                    <span class="key">Keyen</span> kommer først, dernæst et <span class="colon">kolon</span> og til sidst <span class="value">værdien</span>, som efterfølges af et komma.
-                    Der er mere til et <span class="object">objekt</span>, som for eksempel hvordan man får fat på <span class="object-key">key</span>/<span class="value">value</span>-parrene inde i det, <DescriptionCardExampleLink href="https://codepen.io/Schweitz/pen/poXRZVM" target="_blank" linkText="her." />
+                    <span class="object">Objekter</span> tildeles sættes altid lig en <span class="keyword">const</span>-<span class="name">variabelnavnet</span>. Syntaksen starter med <span class="keyword">const</span>, efterfulgt af <span class="name">variabelnavnet</span> og et <span class="equal">lighedstegn</span>. Derefter kommer et sæt <span class="curly-brackets">tuborgparenteser</span>, hvor <span class="object-key">key</span>/<span class="value">value</span>-parrene placeres. <span class="key">Keyen</span> kommer først, efterfulgt af et <span class="colon">kolon</span> og <span class="value">værdien</span>, som afsluttes med et komma.
+
+                    Der er yderligere aspekter ved <span class="object">objekter</span>, såsom hvordan man tilgår <span class="object-key">key</span>/<span class="value">value</span>-parrene inde i dem. Se eksempler <DescriptionCardExampleLink href="https://codepen.io/Schweitz/pen/poXRZVM" target="_blank" linkText="her." />
                 </DescriptionCardText>
             </div>
 
             <CodePreviewCard>
                 <h3>
                     <pre>
-                        <span class="keyword">const</span> <span class="name">person</span> <span class="equal">=</span>
-                        <span class="curly-brackets">&#123;</span>
+                        <span class="keyword">const</span> <span class="name">person</span> <span class="equal">=</span> <span class="curly-brackets">&#123;</span>
                         &nbsp;&nbsp; <span class="object-key">forNavn</span><span class="colon">:</span> <span class="value">"Victor"</span>,
                         &nbsp;&nbsp; <span class="object-key">alder</span><span class="colon">:</span> <span class="value">24</span>,
                         &nbsp;&nbsp; <span class="object-key">køn</span><span class="colon">:</span> <span class="value">"mand"</span>,

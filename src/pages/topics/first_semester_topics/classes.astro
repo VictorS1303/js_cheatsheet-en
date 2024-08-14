@@ -23,12 +23,10 @@ import TopicPageNavbar from '../../../components/TopicPageNavbar.astro'
                 <DescriptionCardHeader class="what-header" headerText="Klassemanipulation"/>
 
                 <DescriptionCardText>
-                    Klassemanipulation er at tilføje til og fjerne klasser fra et element. Dette bruges til at lave en interaktiv side.
-                    Tænk for eksempel på, når du åbner en mobilmenu ved at trykke på de tre streger. Når menuen kommer frem, bliver der tilføjet en klasse,
-                    der har noget styling, der gør, at menuen skal vise sig. Der er blevet manipuleret med klasserne på elementet.
-
-                    Der er indtil flere metoder til klassemanipulation, men de vigtigste er <span class="method">.add<span class="parentheses">(</span> <span class="parentheses">)</span></span>, <span class="method">.remove<span class="parentheses">(</span> <span class="parentheses">)</span></span> og <span class="method">.toggle<span class="parentheses">(</span> <span class="parentheses">)</span></span>.
-                    Disse er nemmere at vise hver især med et eksempel, som alle kan findes <DescriptionCardExampleLink href="https://codepen.io/Schweitz/pen/GRbpZeg" linkText="her." target="_blank"/>
+                    Klassemanipulation handler om at tilføje eller fjerne klasser fra et <span class="element">element</span> for at skabe en interaktiv side. For eksempel når du åbner en mobilmenu ved at trykke på de tre streger, tilføjes en klasse, som styrer menuens visning.
+                    De vigtigste <span class="method">metoder</span> til klassemanipulation er <span class="method">.add<span class="parentheses">(</span><span class="parentheses">)</span></span>, <span class="method">.remove<span class="parentheses">(</span><span class="parentheses">)</span></span> og <span class="method">.toggle<span class="parentheses">(</span><span class="parentheses">)</span></span>. Eksempler på disse metoder kan findes
+                    
+                    <DescriptionCardExampleLink href="https://codepen.io/Schweitz/pen/GRbpZeg" linkText="her." target="_blank"/>
                 </DescriptionCardText>
             </div>
         </DescriptionCard>
@@ -38,10 +36,9 @@ import TopicPageNavbar from '../../../components/TopicPageNavbar.astro'
                 <DescriptionCardHeader class="syntax-header" headerText="Syntaks" />
 
                 <DescriptionCardText>
-                    Da disse er metoder som eventlisters, er syntaksen den samme.
-                    Først kommer <span class="name">variabelnavnet</span>, som efterfølges af <span class="property">.classList</span>. Dernæst et punktum og navnet på den metode, du ønsker at bruge.
-                    Dernæst kommer et sæt <span class="parentheses">parenteser</span>, hvori der er et sæt <span class="quote">citationstegn</span> med navnet på den klasse, som skal gøres noget med.
-                </DescriptionCardText>
+                    Da disse metoder er som <span class="event-type">eventlisters</span>, er syntaksen den samme.
+                    Først kommer <span class="name">variabelnavnet</span> efterfulgt af <span class="property">.classList</span>. Derefter et punktum og det <span class="method">metodenavn</span>, du ønsker at bruge.
+                    Indeni <span class="parentheses">parenteserne</span> skrives et sæt <span class="quote">citationstegn</span> med navnet på den <span class="class">klasse</span>, der skal manipuleres med.                </DescriptionCardText>
             </div>
 
             <CodePreviewCard>
@@ -55,18 +52,3 @@ import TopicPageNavbar from '../../../components/TopicPageNavbar.astro'
         </DescriptionCard>
     </div>
 </Layout>
-
-<style>
- .syntax-card
-        {
-            margin-top: 170px;
-        } 
-
-    @media screen and (min-width: 768px)
-    {
-        .syntax-card
-        {
-            margin-top: 0;
-        } 
-    }
-</style>

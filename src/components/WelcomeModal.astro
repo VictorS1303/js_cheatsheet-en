@@ -5,17 +5,20 @@ import ModalCloseButton from '../components/ModalCloseButton.astro'
 <div class="modal welcome-modal">
     <ModalCloseButton/>
 
-    <img src="public/welcome_modal_image/modal_image.webp" alt="">
+    <img src="public/welcome_modal_image/welcome_modal_image.webp" alt="welcome modal image">
     <div class="container welcome-modal-content-container">
         <div class="container welcome-modal-text-container">
             <p>
-                Hej, jeg hedder Victor Schweitz, og det er mig, der står bag denne side.
+                Hej
+                <br />
+                <br />
+                Jeg hedder Victor Schweitz, og det er mig, der står bag denne side.
                 Denne side er tiltænkt som et uddybende cheat sheet/læringsside.
                 Emnerne kommer mere eller mindre i den rækkefølge, som de gør i undervisningen.
                 Derfor anbefales det også at tage emnerne i den rækkefølge, som de kommer, da det antages,
                 i de kommende emner, at man har forstået koncepterne fra de forrige.
                 <br />
-                Har du spørgsmål til emnerne eller andre problemer med kodning generelt, er du mere end velkommen til at skrive til mig på <a href="https://www.facebook.com/vschweitz/" target="_blank">facebook</a>. 
+                Har du spørgsmål til emnerne eller andre problemer med kodning generelt, er du mere end velkommen til at skrive til mig på <a href="https://www.facebook.com/vschweitz">facebook</a>.
             </p>
         </div>
     </div>
@@ -48,8 +51,9 @@ import ModalCloseButton from '../components/ModalCloseButton.astro'
     
     .welcome-modal img
     {
-        height: 150px;
-        width: 150px;
+        height: 140px;
+        width: 140px;
+        aspect-ratio: 1;
         margin-top: 70px;
         border-radius: calc(var(--base-border-radius) * 50);
         object-fit: cover;
@@ -57,12 +61,15 @@ import ModalCloseButton from '../components/ModalCloseButton.astro'
 
     .container.welcome-modal-content-container
     {
+        font-family: 'Noto Sans', sans-serif;
         display: flex;
         flex-direction: column;
         justify-content: center;
         margin-bottom: 20px;
         padding: 20px;
         text-align: left;
+        color: #fff;
+        font-size: 15px;
         overflow-x: scroll;
     }
 
@@ -74,23 +81,22 @@ import ModalCloseButton from '../components/ModalCloseButton.astro'
     .container.welcome-modal-text-container p
     {
         margin-top: 30px;
-        font-size: 18px;
+        font-size: 17px;
     }
 
-    .container.welcome-modal-text-container p > *
+    .container.welcome-modal-text-container a
     {
         color: inherit;
-    }
-
-    .container.welcome-modal-text-container p a
-    {
         border-bottom: 2px dashed #fff;
     }
 
-    .container.welcome-modal-text-container p a:hover
+    .container.welcome-modal-text-container a:hover
     {
-        border-bottom-style: solid;
+        border-bottom: 2px solid #ff0;
     }
+
+    
+
 
     @media screen and (min-width: 768px)
     {
@@ -100,6 +106,11 @@ import ModalCloseButton from '../components/ModalCloseButton.astro'
             width: 700px;
         }
 
+        .welcome-modal p
+        {
+            font-size: 20px;
+        }
+
     }
 </style>
 
@@ -107,11 +118,11 @@ import ModalCloseButton from '../components/ModalCloseButton.astro'
     const welcomeModal = document.querySelector('.welcome-modal') as HTMLElement
     const modalCloseButton = document.querySelector('.welcome-modal .modal-close-btn')
 
-    // window.addEventListener('load', () => {
-    //     setTimeout(() => {
-    //         openWelcomeModal()
-    //     }, 1100)
-    // })
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            openWelcomeModal()
+        }, 1100)
+    })
 
     modalCloseButton.addEventListener('click', closeWelcomeModal)
 
@@ -121,8 +132,8 @@ import ModalCloseButton from '../components/ModalCloseButton.astro'
         welcomeModal.classList.remove('active')
     }
 
-    // function openWelcomeModal()
-    // {
-    //     welcomeModal.classList.add('active')       
-    // }
+    function openWelcomeModal()
+    {
+        welcomeModal.classList.add('active')       
+    }
 </script>

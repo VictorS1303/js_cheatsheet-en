@@ -23,7 +23,7 @@ import TopicPageNavbar from '../../../components/TopicPageNavbar.astro'
                 <DescriptionCardText>
                         Der er rigtigt mange ting, man  kan ændre på, når det kommer til lyd, men dem, som man bruger på 1. semester, er følgende:
                         <span class="method">.play</span><span class="parentheses">(</span><span class="parentheses">)</span>, <span class="method">.pause</span><span class="parentheses">(</span><span class="parentheses">)</span>, <span class="property">.muted</span>, <span class="property">.volume</span>, <span class="property">.duration</span> og <span class="property">.currentTime</span>. 
-                        Se et eksempel med dem alle
+                        Download et eksempel med dem alle
                         
                         <DownloadButton
                             href="/public/zips/lyd-eksempel.zip"
@@ -72,7 +72,6 @@ import TopicPageNavbar from '../../../components/TopicPageNavbar.astro'
                 <DescriptionCardText>
                     For at kunne bruge nogle af de ting, der er, når det kommer til lyd, skal man først have sit <span class="element">audio</span>-element hentet ind i sin JavaScript som en <span class="name">variabel</span>.
                     Derefter kan man så begynde at bruge nogle af de ting, der er, når det kommer til at arbejde med lyd.
-                    <span class="hide">I eksemplet nedenunder vil lyden begynde at afspille.</span>
                 </DescriptionCardText>
             </div>
 
@@ -98,6 +97,7 @@ import TopicPageNavbar from '../../../components/TopicPageNavbar.astro'
         display: flex;
         justify-content: space-between;
         gap: 50px;
+        white-space: nowrap;
     }
     
     .hide
