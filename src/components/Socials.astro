@@ -23,7 +23,8 @@
     {
         position: absolute;
         bottom: 30px;
-        left: 50px;
+        left: 50%;
+        transform: translateX(-50%);
         font-size: 20px;
     }
 
@@ -39,11 +40,17 @@
         transition: color .15s ease-in;
     }
 
-    @media screen and (max-width: 768px)
+    @media screen and (min-width: 768px)
+    {
+        @media screen and (min-width: 768px)
     {
         .socials-container
         {
-            top: 20px;
+            top: auto;
+            bottom: 20px; 
+            left: 50px; 
+            transform: translateX(-50%);
         }
+    }
     }
 </style>
