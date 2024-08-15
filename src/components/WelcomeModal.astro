@@ -15,7 +15,7 @@ import ModalCloseButton from '../components/ModalCloseButton.astro'
                 Jeg hedder Victor Schweitz, og det er mig, der står bag denne side.
                 Denne side er tiltænkt som et uddybende cheat sheet/læringsside.
                 Emnerne kommer mere eller mindre i den rækkefølge, som de gør i undervisningen.
-                Derfor anbefales det også at tage emnerne i den rækkefølge, som de kommer, da det antages,
+                Derfor anbefales det også at tage emnerne i den rækkefølge, som de kommer, da det antages
                 i de kommende emner, at man har forstået koncepterne fra de forrige.
                 <br />
                 Har du spørgsmål til emnerne eller andre problemer med kodning generelt, er du mere end velkommen til at skrive til mig på <a href="https://www.facebook.com/vschweitz">facebook</a>.
@@ -35,8 +35,9 @@ import ModalCloseButton from '../components/ModalCloseButton.astro'
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        gap: 20px;
         width: 340px;
-        height: 800px;
+        height: 700px;
         border-radius: var(--base-border-radius);
         background-color: var(--modal-background-color);
         z-index: 500;
@@ -70,7 +71,6 @@ import ModalCloseButton from '../components/ModalCloseButton.astro'
         text-align: left;
         color: #fff;
         font-size: 15px;
-        overflow-x: scroll;
     }
 
     .container.welcome-modal-content-container header h2 span
@@ -80,14 +80,14 @@ import ModalCloseButton from '../components/ModalCloseButton.astro'
 
     .container.welcome-modal-text-container p
     {
-        margin-top: 30px;
         font-size: 17px;
+        overflow: hidden;
     }
 
     .container.welcome-modal-text-container a
     {
-        color: inherit;
-        border-bottom: 2px dashed #fff;
+        color: #fff;
+        text-decoration: underline;
     }
 
     .container.welcome-modal-text-container a:hover
@@ -115,21 +115,48 @@ import ModalCloseButton from '../components/ModalCloseButton.astro'
 </style>
 
 <script>
+    const overlay = document.getElementById('overlay')
     const welcomeModal = document.querySelector('.welcome-modal') as HTMLElement
     const modalCloseButton = document.querySelector('.welcome-modal .modal-close-btn')
+    const mainNav = document.getElementById('main_nav')
+    const socialsContainer = document.querySelector('.socials-container') as HTMLElement
 
-    window.addEventListener('load', () => {
-        setTimeout(() => {
-            openWelcomeModal()
-        }, 1100)
+    window.addEventListener('load', () =>
+    {
+        openWelcomeModalAndOverlay()
     })
 
-    modalCloseButton.addEventListener('click', closeWelcomeModal)
+    modalCloseButton.addEventListener('click', closeWelcomeModalAndOverlay)
 
+    function openWelcomeModalAndOverlay()
+    {
+        setTimeout(() => {
+           overlay.classList.add('active')   
+           disable()
+        }, 400)
 
-    function closeWelcomeModal()
+        setTimeout(() => {
+            openWelcomeModal()
+        }, 700)
+    }
+
+    function closeWelcomeModalAndOverlay()
     {
         welcomeModal.classList.remove('active')
+        overlay.classList.remove('active')
+        enable()
+    }
+
+    function disable()
+    {
+        mainNav.style.pointerEvents = 'none'
+        socialsContainer.style.pointerEvents = 'none'
+    }
+
+    function enable()
+    {
+        mainNav.style.pointerEvents = 'all'
+        socialsContainer.style.pointerEvents = 'all'
     }
 
     function openWelcomeModal()

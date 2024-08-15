@@ -1,0 +1,30 @@
+<div class="overlay" id="overlay"></div>
+
+<style>
+    .overlay
+    {
+        position: absolute;
+        inset: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, .5);
+        cursor: none;
+        z-index: -200;
+        opacity: 0;
+        transition: opacity .2s ease-in;
+    }
+
+    .overlay.active
+    {
+        opacity: 1;
+        z-index: 500;
+        pointer-events: none;
+        transition: opacity .2s ease-in;
+    }
+</style>
+
+<script>
+    const overlay = document.querySelector('.overlay') as HTMLElement
+
+    console.log(overlay.classList.contains('.active'))
+</script>
