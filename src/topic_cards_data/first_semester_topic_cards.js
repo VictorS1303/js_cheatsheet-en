@@ -68,8 +68,3 @@ export const firstSemesterTopicCards =
         topicNumber: 11
     },
 ]
-
-for(let i = 0; i < firstSemesterTopicCards.length; i++)
-{
-    console.log(firstSemesterTopicCards[i].cardURL)
-}
