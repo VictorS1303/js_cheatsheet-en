@@ -21,3 +21,39 @@ import Button from './Button.astro'
         }
     }
 </style>
+
+<script>
+    const downloadModalOpenBtn = document.querySelector('.modal-open-button')
+    const overlay = document.getElementById('overlay')
+    const downloadModal = document.getElementById('download_modal')
+    const downloadModalCloseBtn = document.querySelector('.download-modal .modal-close-btn')
+    const mainNav = document.getElementById('main_nav')
+    const socialsContainer = document.querySelector('.socials-container') as HTMLElement
+
+    downloadModalOpenBtn.addEventListener('click', openOverlay)
+    downloadModalCloseBtn.addEventListener('click', closeOverlay)
+  
+    function openOverlay()
+    {
+        overlay.classList.add('active')
+        disable()
+    }
+    
+    function closeOverlay()
+    {
+        overlay.classList.remove('active')
+        enable()
+    }
+
+    function disable()
+    {
+        mainNav.style.pointerEvents = 'none'
+        socialsContainer.style.pointerEvents = 'none'
+    }
+
+    function enable()
+    {
+        mainNav.style.pointerEvents = 'all'
+        socialsContainer.style.pointerEvents = 'all'
+    }
+</script>
