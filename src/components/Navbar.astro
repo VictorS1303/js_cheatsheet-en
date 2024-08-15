@@ -12,10 +12,10 @@ const currentPage = new URL(Astro.request.url).pathname
     </a>
     <ul>
         <li>
-            <a href="first_semester" class={currentPage === '/first_semester/' ? 'active' : ''}>1. semester</a>
+            <a href="/first_semester/" class={currentPage === '/first_semester/' ? 'active' : ''}>1. semester</a>
         </li>
         <li>
-            <a href="second_semester" class={currentPage === '/second_semester/' ? 'active' : ''}>2. semester</a>
+            <a href="/second_semester/" class={currentPage === '/second_semester/' ? 'active' : ''}>2. semester</a>
         </li>
       
     </ul>
