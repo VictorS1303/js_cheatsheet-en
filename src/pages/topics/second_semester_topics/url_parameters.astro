@@ -17,9 +17,7 @@ import DownloadButton from '../../../components/DownloadButton.astro'
                 <DescriptionCardHeader class="what-header" headerText="URL-parametre"/>
 
                 <DescriptionCardText>
-                    URL-parametre er en måde, hvorpå man kan sende data fra en side med videre til en anden side via URL'en.
-                    Dette bruges til at skabe et bedre flow i ens hjemmeside. Forestil dig, at du har en webshop, hvor en kunde vælger en vare.
-                    Dernæst skal den vare sendes med videre til kurven, og fra kurven skal den sendes med videre til betalingssiden. Dette sker ved at bruge URL-parametre.
+                    URL-parametre bruges til at sende data fra en side til en anden via URL'en, hvilket forbedrer brugeroplevelsen. For eksempel i en webshop kan URL-parametre overføre valgte varer fra produktvisning til kurv og videre til betalingssiden.
                 </DescriptionCardText>
             </div>
         </DescriptionCard>
@@ -29,15 +27,11 @@ import DownloadButton from '../../../components/DownloadButton.astro'
                 <DescriptionCardHeader class="syntax-header" headerText="Syntaks" />
 
                 <DescriptionCardText>
-                    Først kommer <span class="url">basis-URL’en</span>, som er den, der ender med “.html”. Dernæst kommer et spørgsmålstegn, som indikerer, at det første parameter kommer, hvorefter navnet på det første <span class="parameter">parameter</span> kommer efterfulgt af et <span class="equal">lighedstegn</span> og <span class="value">parameterets værdi</span>.
-                    Syntaksen er meget striks, og da der skal bruges nogle forskellige metoder, er det hele beskrevet i dybden i eksemplet,
-                    der kan downloades <DownloadButton
-                    href="/zips/url_parametre-eksempel.zip"
-                    class="btn zip-file-download-btn"
-                    id="zip_file_download_btn"
-                    download="url_parametre-eksempel"
-                >
-                her.
+                    Først har du <span class="url">basis-URL'en</span>, som slutter med ".html". Herefter tilføjes et spørgsmålstegn, der markerer starten på det første <span class="parameter">parameter</span>, efterfulgt af <span class="name">parameternavnet</span>, et <span class="equal">lighedstegn</span>, og <span class="parameter">parameterets</span> værdi. Syntaksen er striks, og eksemplet <DownloadButton
+                        href="/zips/url_parametre-eksempel.zip"
+                        class="btn zip-file-download-btn"
+                        id="zip_file_download_btn"
+                        download="url_parametre-eksempel">her</DownloadButton> forklarer de nødvendige metoder til at sende og modtage parametre i detaljer.
                 </DescriptionCardText>
             </div>
 
