@@ -22,8 +22,7 @@ import TopicPageNavbar from '../../../components/TopicPageNavbar.astro'
             <DescriptionCardHeader headerText="Konsollen" />
 
             <DescriptionCardText>
-                Konsollen bruges primært til at finde fejl i ens kode. Det er der, du får din fejlmeddelelse, og det er også det værktøj, du kan bruge til at logge forskellige dele af din kode for at finde ud af, hvad og hvor fejlen(e) er.
-                Konsollen åbnes i browseren ved at højreklikke hvor som helst og dernæst trykke "Inspicér" eller "Undersøg" (alt efter din browser).
+                Konsollen bruges til at finde fejl i koden ved at vise fejlmeddelelser og logge kode. Den åbnes i browseren ved at højreklikke og vælge "Inspicér" eller "Undersøg".
             </DescriptionCardText>
 
             
@@ -33,10 +32,14 @@ import TopicPageNavbar from '../../../components/TopicPageNavbar.astro'
             <DescriptionCardHeader headerText="Syntaks" />
 
             <DescriptionCardText>
-                Der er ikke som sådan nogen syntaks til konsollen, da det er helt almindelig JavaScript, man skriver i den.
-                For at logge noget til konsollen fra ens text editor, skrives <span class="object">console</span><span class="method">.log</span> efterfulgt af et sæt <span class="parentheses">parenteser</span>.
-                Inde i parentserne skrives så det, man vil logge, hvilket kan være hvad som helst, der er brugbart for at løse ens problem.
-                Download eksempel på brug af konsollen
+                I konsollen skrives almindelig JavaScript med almindelig JavaScript-syntaks.
+
+                For at logge til konsollen skrives <span class="object">console</span> efterfulgt af <span class="method">.log</span><span class="parentheses">()</span>
+
+                Inde i parenteserne skrives det, man vil logge.
+                Er det tekst, skal der <span class="quote">citationstegn</span> omkring. Er det kode, skriver man det bare direkte i <span class="parentheses">parenteserne</span>.
+
+                Se mere i eksemplet
                 <DownloadButton
                     href="/zips/console-eksempel.zip"
                     class="btn zip-file-download-btn"
