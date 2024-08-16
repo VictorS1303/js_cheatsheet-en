@@ -22,8 +22,8 @@ const currentPage = new URL(Astro.request.url).pathname
 </nav>
 
 <style>
-   .mobile-menu-toggle-btn
-   {
+    .mobile-menu-toggle-btn
+    {
         position: absolute;
         top: 20px;
         right: 20px;
@@ -31,60 +31,62 @@ const currentPage = new URL(Astro.request.url).pathname
         font-size: 25px;
         cursor: pointer;
         transition: color .15s ease-in, right .4s ease-in;
-   }
+    }
 
-   .mobile-menu-toggle-btn.active
-   {
+    .mobile-menu-toggle-btn.active
+    {
         right: 220px;
         transition: right .4s ease-in;
-   }
+    }
 
-   .mobile-menu-toggle-btn:hover
-   {
+    .mobile-menu-toggle-btn:hover
+    {
         color: #ff0;
         transition: color .15s ease-in;
-   }
+    }
 
-   nav
-   {
-        display: flex;
+    nav
+    {
         position: absolute;
-        right: -250px;
+        right: -200px;
         height: 100dvh;
-        width: 200px;
         background-color: var(--mobile-header-background-color);
-        z-index: 100;
-        transition: right .4s ease-in;
-   }
+        width: 200px;
+        display: grid;
+        place-content: center;
+        text-align: center;
+        z-index: 1000;
+        transition: right .3s ease-in;
+    }
 
-   nav.active
-   {
+    nav.active
+    {
         right: 0;
-   }
+        transition: right .3s ease-in;
+    }
 
-   nav h1
-   {
-        position: absolute;
-        bottom: 20px;
-        left: 50%;
-        transform: translateX(-50%);
-        font-size: 30px;
-        white-space: nowrap;
-   }
+    nav h1
+    {  
+       position: absolute;    
+       bottom: 20px;
+       left: 50%;
+       transform: translateX(-50%);
+    }
 
+   
    nav h1 span
    {
-        color: #ff0;
+    color: #ff0;
+   }
+
+   nav ul
+   {
+       font-size: 21px;
    }
 
    nav ul li
    {
-        font-size: 20px;
-   }
-
-   nav ul li:not(:last-child)
-   {
-        margin-bottom: 20px;
+      margin-bottom: 20px;
    }
 
    nav ul li a
@@ -123,41 +125,42 @@ const currentPage = new URL(Astro.request.url).pathname
         {
             display: none;
         }
-
-        nav        
+        nav
         {
             position: relative;
+            right: auto;
+            height: 70px;
+            background-color: transparent;
+            width: 100dvw;
             display: flex;
             justify-content: space-between;
-            margin-top: 10px;
-            padding: 0 50px;
             align-items: center;
-            height: 70px;
-            width: 100%;
-            left: 0;
-            background-color: transparent;
+            padding: 50px;
         }
 
         nav h1
         {
-            position: relative;
-            left: 120px;
-            margin-top: 37px;
+            position: static;
+            font-size: 30px;
+            transform: none;
         }
 
         nav ul
         {
-            display: flex; 
-            gap: 40px;
+            display: flex;
+            gap: 15px;
             align-items: center;
-            margin-right: 50px;
+            justify-content: center;
+            height: 100%;
+            margin-top: 20px;
         }
 
-        nav ul li:first-child
+        nav ul li
         {
-            margin-bottom: 0;
+            margin-left: 20px;
         }
-   }
+       
+    }
 </style>
 
 <script>
