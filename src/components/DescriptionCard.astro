@@ -14,10 +14,9 @@ const { class: className } = Astro.props;
         left: 50%;
         transform: translate(-50%, -50%);
         display: flex;
-        justify-content: space-between;
         flex-direction: column;
-        align-items: center;
-        gap: 30px;
+        justify-content: space-between;
+        gap: 50px;
         padding: 30px;
         width: fit-content;
         overflow: hidden scroll;
@@ -45,11 +44,6 @@ const { class: className } = Astro.props;
             height: auto;
             max-height: 500px;
         }
-
-        /* .container.desc-container > *
-        {
-            max-height: 500px;
-        } */
         
         .container.desc-container > .card
         {
