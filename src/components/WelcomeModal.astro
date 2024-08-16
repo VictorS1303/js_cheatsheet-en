@@ -2,21 +2,20 @@
 import ModalCloseButton from '../components/ModalCloseButton.astro'
 ---
 
-<div class="modal welcome-modal">
+<div class="modal welcome-modal active">
     <ModalCloseButton/>
 
     <img src="/welcome_modal_image/welcome_modal_image.webp" alt="welcome modal image">
     <div class="container welcome-modal-content-container">
         <div class="container welcome-modal-text-container">
             <p>
-                Hej
-                <br />
-                <br />
                 Jeg hedder Victor Schweitz, og det er mig, der står bag denne side.
                 Denne side er tiltænkt som et uddybende cheat sheet/læringsside.
-                Emnerne kommer mere eller mindre i den rækkefølge, som de gør i undervisningen.
-                Derfor anbefales det også at tage emnerne i den rækkefølge, som de kommer, da det antages
-                i de kommende emner, at man har forstået koncepterne fra de forrige.
+                Emnerne kommer mere eller mindre i den rækkefølge, som de gør i undervisningen, hvorfor det anbefales at tage emnerne i den rækkefølge, da det det næste bygger videre på det forrige.
+                <br />
+                <br />
+                Der er PDF'er til download, som indeholder en kort opsummering af hvert emne samt på sidste side links til alle eksemplerne til hvert emne.
+                <br />
                 <br />
                 Har du spørgsmål til emnerne eller andre problemer med kodning generelt, er du mere end velkommen til at skrive til mig på <a href="https://www.facebook.com/vschweitz" target="_blank">facebook</a>.
             </p>
@@ -37,7 +36,7 @@ import ModalCloseButton from '../components/ModalCloseButton.astro'
         align-items: center;
         gap: 20px;
         width: 340px;
-        height: 700px;
+        height: auto;
         border-radius: var(--base-border-radius);
         background-color: var(--modal-background-color);
         z-index: 500;
@@ -69,7 +68,13 @@ import ModalCloseButton from '../components/ModalCloseButton.astro'
         margin-bottom: 20px;
         padding: 20px;
         text-align: left;
+        height: auto;
         color: #fff;
+        overflow-x: scroll;
+    }
+
+    .container.welcome-modal-content-container .container.welcome-modal-text-container
+    {
     }
     
     .container.welcome-modal-content-container header h2 span
