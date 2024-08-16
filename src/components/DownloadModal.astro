@@ -30,18 +30,28 @@ import DownloadButton from "./DownloadButton.astro"
 </Modal>
 
 <style>
-    div {
+    div
+    {
         display: flex;
         flex-direction: column;
         gap: 20px;
     }
 
-    div img {
+    div img
+    {
         height: 200px;
         width: 175px;
         aspect-ratio: 1;
         border-radius: calc(var(--base-border-radius) / 2);
         object-fit: cover;
+    }
+
+    @media screen and (min-width: 768px)
+    {
+        .download-modal
+        {
+            min-height: 600px;
+        }
     }
 
 </style>

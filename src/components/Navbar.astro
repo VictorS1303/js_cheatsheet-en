@@ -48,7 +48,7 @@ const currentPage = new URL(Astro.request.url).pathname
     nav
     {
         position: absolute;
-        right: -200px;
+        right: -250px;
         height: 100dvh;
         background-color: var(--mobile-header-background-color);
         width: 200px;
@@ -56,13 +56,13 @@ const currentPage = new URL(Astro.request.url).pathname
         place-content: center;
         text-align: center;
         z-index: 1000;
-        transition: right .3s ease-in;
+        transition: right .5s ease-in;
     }
 
     nav.active
     {
         right: 0;
-        transition: right .3s ease-in;
+        transition: right .5s ease-in;
     }
 
     nav h1
@@ -76,7 +76,7 @@ const currentPage = new URL(Astro.request.url).pathname
    
    nav h1 span
    {
-    color: #ff0;
+       color: #ff0;
    }
 
    nav ul

@@ -116,10 +116,10 @@ import ModalCloseButton from '../components/ModalCloseButton.astro'
     const mainNav = document.getElementById('main_nav')
     const socialsContainer = document.querySelector('.socials-container') as HTMLElement
 
-    // window.addEventListener('load', () =>
-    // {
-    //     openWelcomeModalAndOverlay()
-    // })
+    window.addEventListener('load', () =>
+    {
+        openWelcomeModalAndOverlay()
+    })
 
     modalCloseButton.addEventListener('click', closeWelcomeModalAndOverlay)
 
