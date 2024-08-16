@@ -37,12 +37,31 @@ import TopicPageNavbar from '../../../components/TopicPageNavbar.astro'
                     Først skrives <span class="name">funktionsnavnet</span> (<span class="method">setInterval</span> eller <span class="method">setTimeout</span>). Dernæst kommer et sæt <span class="parentheses">parenteser</span>, inde i hvilke man skriver <span class="keyword">function</span> efterfulgt af et sæt <span class="parentheses">parenteser</span> og <span class="curly-brackets">tuborgparenteser</span>, inde i hvilke <span class="code">koden</span>, der skal køres, står. Se eksempler <DescriptionCardExampleLink href="https://codepen.io/Schweitz/pen/LYKpZyP" linkText="her." target="_blank"/>
                 </DescriptionCardText>
             </div>
+            <CodePreviewCard>
+                <h3>
+                    <pre>
+                        <span class="method">setTimeout</span><span class="parentheses">(</span><span class="keyword">function</span><span class="parentheses">()</span> <span class="curly-brackets">&#123;</span>
+                        &nbsp;&nbsp;<span class="code">// Kode her</span>
+                        <span class="curly-brackets">&#125;</span>, interval<span class="parentheses">)</span>
+                    </pre>
+                </h3>
+            </CodePreviewCard>
         </DescriptionCard>
     
     </div>
 </Layout>
 
 <style>
+    pre
+    {
+        display: block;
+    }
+
+    pre:not(:last-child)
+    {
+        margin-bottom: 15px;
+    }
+
     .container.desc-container
     {
         height: 80dvh;

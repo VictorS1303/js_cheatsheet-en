@@ -6,7 +6,7 @@
 <style is:global>
     .card.preview-card
     {
-        display: none;
+        display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -20,16 +20,14 @@
         
     }
 
-    @media screen and (min-width: 1100px)
-    {
-        .card.preview-card
-        {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-    }
+
+  @media screen and (max-width: 700px)
+  {
+     .card.preview-card
+     {
+        display: none;
+     }
+  }
 
     
 </style>

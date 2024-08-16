@@ -64,7 +64,7 @@ import TopicPageNavbar from '../../../components/TopicPageNavbar.astro'
             </CodePreviewCard>
         </DescriptionCard>
 
-        <DescriptionCard class="card syntax-card">
+        <DescriptionCard>
             <div class="card syntax-card">
                 <DescriptionCardHeader headerText="Syntaks" />
                 
@@ -74,23 +74,14 @@ import TopicPageNavbar from '../../../components/TopicPageNavbar.astro'
                 </DescriptionCardText>
             </div>
 
-            <CodePreviewCard>
-                <h3>
-                    <pre>
-                        // Variabel
-                        <span class="keyword">const</span> <span class="name">audio</span> <span class="equal">=</span> <span class="object">document</span><span class="method">.querySelector</span><span class="parentheses">(</span><span class="quote">'</span><span class="selector">audio</span><span class="quote">'</span><span class="parentheses">)</span>
-
-                        // Afspil lyd
-                        <span class="name">audio</span><span class="method">.play()</span>
-                    </pre>
-                </h3>
-            </CodePreviewCard>
+          
         </DescriptionCard>
     </div>
 </Layout>
 
 
 <style>
+
     ul li
     {
         display: flex;
