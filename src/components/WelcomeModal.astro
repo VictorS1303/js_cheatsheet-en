@@ -114,6 +114,8 @@ import ModalCloseButton from '../components/ModalCloseButton.astro'
     const welcomeModal = document.querySelector('.welcome-modal') as HTMLElement
     const modalCloseButton = document.querySelector('.welcome-modal .modal-close-btn')
     const mainNav = document.getElementById('main_nav')
+    const mobileMenuToggleButton = document.getElementById('mobile_menu_toggle_btn')
+    console.log(mobileMenuToggleButton)
     const socialsContainer = document.querySelector('.socials-container') as HTMLElement
 
     window.addEventListener('load', () =>
@@ -146,12 +148,14 @@ import ModalCloseButton from '../components/ModalCloseButton.astro'
     {
         mainNav.style.pointerEvents = 'none'
         socialsContainer.style.pointerEvents = 'none'
+        mobileMenuToggleButton.style.pointerEvents = 'none'
     }
 
     function enable()
     {
         mainNav.style.pointerEvents = 'all'
         socialsContainer.style.pointerEvents = 'all'
+        mobileMenuToggleButton.style.pointerEvents = 'all'
     }
 
     function openWelcomeModal()
