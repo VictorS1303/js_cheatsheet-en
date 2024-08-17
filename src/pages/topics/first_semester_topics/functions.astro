@@ -14,18 +14,16 @@ import TopicPageNavbar from '../../../components/TopicPageNavbar.astro'
         <h1 class="logo">
             <span>JS</span> Cheat Sheet
         </h1>
-        <BackButton className="back-button" id="back_button" href="/first_semester/" buttonText="Til oversigt"/>    </TopicPageNavbar>
+        <BackButton className="back-button" id="back_button" href="/first_semester/" buttonText="Til oversigt"/>
+    </TopicPageNavbar>
 
     <div class="container desc-container">
         <DescriptionCard class="card what-card">
             <div class="what">
-                <DescriptionCardHeader class="what-header" headerText="Hvad er en funktion?" />
+                <DescriptionCardHeader class="what-header" headerText="What is a function?" />
                 <DescriptionCardText>
-                   
-                    En funktion er en måde at skrive sin kode på, så man kan genanvende det i stedet for at skrive de samme linjer kode alle steder, hvor den samme ting skal udføres. En funktion gør det også meget lettere at overskue sin kode.
-                    Et eksempel kan findes 
                     
-                    <DescriptionCardExampleLink href="https://codepen.io/Schweitz/pen/XWLbedz" linkText="her." target="_blank">
+                    A function is a way of writing code in a way, so it the same code can be reused in stead of having to write the same code over and over. A function also make the code much more managable. An example on functions can be found <DescriptionCardExampleLink href="https://codepen.io/Schweitz/pen/XWLbedz" linkText="here." target="_blank">
                 </DescriptionCardText>
             </div>
         </DescriptionCard>        
@@ -33,7 +31,8 @@ import TopicPageNavbar from '../../../components/TopicPageNavbar.astro'
         <DescriptionCard class="card syntax-card">
             <DescriptionCardHeader class="syntax-header" headerText="Syntaks"/>
             <DescriptionCardText>
-                En <span class="keyword">funktion</span> begynder med ordet <span class="keyword">function</span>, efterfulgt af et selvvalgt <span class="name">funktionsnavn</span>, <span class="parentheses">parenteser</span> og derefter <span class="curly-brackets">tuborgparenteser</span> med <span class="code">koden</span> indeni. <span class="keyword">Funktionen</span> udfører først noget, når den bliver kaldt, som vist i eksemplet.            </DescriptionCardText>
+                A <span class="keyword">function</span> starts with the word <span class="keyword">function</span> followed by a <span class="name">function name</span> of your own choice. Then comes a pair of <span class="parentheses">parentheses</span> followed by some <span class="curly-brackets">curly brackets</span> with <span class="code">the code</span> inside of it. The <span class="keyword">function</span> first runs <span class="code">the code</span> upon calling it.
+            </DescriptionCardText>
            
                 <CodePreviewCard>
                     <h3>

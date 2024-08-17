@@ -19,23 +19,21 @@ import TopicPageNavbar from '../../../components/TopicPageNavbar.astro'
     <div class="container desc-container">
         <DescriptionCard class="card what-card">
             <div class="card what-card">
-                <DescriptionCardHeader class="what-header" headerText="Hvad er variabel?" />
+                <DescriptionCardHeader class="what-header" headerText="What is a variable?" />
 
                 <DescriptionCardText>
-                    En variabel er en reference til en værdi.
-                    <br/>
-                    <br/>
-                    Der er tre primære variabeltyper -
+                    A variable is a reference to a value.
+                    <br />
+                    <br />
+                    There are three primary variable types:
                     <span class="keyword"><em>var</em></span>,
-                    <span class="keyword"><em>let</em></span> og
+                    <span class="keyword"><em>let</em></span>, and
                     <span class="keyword"><em>const</em></span>.
-                    
-                    En <span class="keyword"><em>const</em></span>-variabels værdi kan <em>ikke</em> overskrives, hvilket vil sige, at når den har fået en værdi, har den denne værdi <em>altid</em>.
-                    En <span class="keyword"><em>let</em></span>- eller <span class="keyword"><em>var</em></span>-variabels værdi kan overskrives. Se uddybende forklaring og eksempler på brugen af de forskellige variable <DescriptionCardExampleLink href="https://codepen.io/Schweitz/pen/VwJLEvE" linkText="her." target="_blank">
 
-                    <br />
-                    <br />
-                    Det anbefales dog altid, at man anvender <span class="keyword"><em>let</em></span> til variable, hvis værdier på et senere tidspunkt skal overskrives.
+                    The value of a <span class="keyword">const</span> variable cannot be overridden,
+                    meaning that once it's been declared, <em>its value persists</em>.
+
+                    The value of a <span class="keyword">let</span> or <span class="keyword">var</span> variable can be overridden. Read the in-depth explanation and examples on the use of the different variable types <DescriptionCardExampleLink href="https://codepen.io/Schweitz/pen/VwJLEvE" linkText="here." target="_blank" />
                 </DescriptionCardText>
             </div>
         </DescriptionCard>
@@ -44,7 +42,8 @@ import TopicPageNavbar from '../../../components/TopicPageNavbar.astro'
             <DescriptionCardHeader class="syntax-header" headerText="Syntaks" /> 
 
             <DescriptionCardText>
-                Først angives <span class="name">variabeltypen</span> <span class="keyword"><em>const</em></span>, <span class="keyword"><em>let</em></span> eller <span class="keyword">var</span> efterfulgt af <span class="name">variabelnavnet</span>. Derefter sættes et <span class="equal">lighedstegn</span>, og så angives variablens <span class="value">værdi</span>. Dette er syntaksen, uanset hvilken variabeltype du bruger.            </DescriptionCardText>
+                Firstly, you write the variable type followed by the <span class="name">variable name</span>. Thereafter follows an <span class="equal">equal sign</span>. Lastly, after the <span class="equal">equals sign</span>, the <span class="value">value</span> of the <span class="keyword">variable</span> comes. That's the syntax no matter the variable type.
+            </DescriptionCardText>
 
             <CodePreviewCard>
                 <h3>
