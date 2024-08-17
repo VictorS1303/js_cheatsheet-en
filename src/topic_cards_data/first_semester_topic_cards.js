@@ -2,20 +2,20 @@ export const firstSemesterTopicCards =
 [
     {
         cardURL: 'functions',
-        cardFrontText: 'Funktioner',
+        cardFrontText: 'Functions',
         cardBackText: 'function myFunction()',
         topicNumber: 1
     },
     {
         cardURL: 'variables_constants',
-        cardFrontText: 'Variable & Konstante',
+        cardFrontText: 'Variables & Constants',
         cardBackText: 'var, let, const',
         topicNumber: 2,
     },
     {
         cardURL: 'selectors',
         cardFrontText: 'Selectors',
-        cardBackText: 'Klasser, id\'er & elementer',
+        cardBackText: 'Classes, id\'s & elements',
         topicNumber: 3
     },
     {
@@ -26,7 +26,7 @@ export const firstSemesterTopicCards =
     },
     {
         cardURL: 'classes',
-        cardFrontText: 'Klassemanipulation',
+        cardFrontText: 'Class manipulation',
         cardBackText: '.add(), .remove(), .toggle()',
         topicNumber: 5
     },
@@ -39,31 +39,31 @@ export const firstSemesterTopicCards =
     },
     {
         cardURL: 'random',
-        cardFrontText: 'Tilfældighed',
+        cardFrontText: 'Randomness',
         cardBackText: 'Math.random()',
         topicNumber: 7
     },
     {
         cardURL: 'operands',
-        cardFrontText: 'Sammenlignende operatorer',
+        cardFrontText: 'Comparing operands',
         cardBackText: '<, >, <=, >=, ||, &&, =, ==',
         topicNumber: 8
     },
     {
         cardURL: 'conditions',
-        cardFrontText: 'Forhold',
+        cardFrontText: 'Conditions',
         cardBackText: 'if/else',
         topicNumber: 9
     },
     {
         cardURL: 'console',
-        cardFrontText: 'Konsollen',
+        cardFrontText: 'Console',
         cardBackText: 'console.log()',
         topicNumber: 10
     },
     {
         cardURL: 'sound',
-        cardFrontText: 'Lyd',
+        cardFrontText: 'Sound',
         cardBackText: '.play(), .pause(), .muted, \n, .volume, .duration, .currentTime',
         topicNumber: 11
     },

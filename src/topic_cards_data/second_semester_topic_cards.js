@@ -8,7 +8,7 @@ export const secondSemesterTopicCards =
     },
     {
         cardURL: 'objects',
-        cardFrontText: 'Objekter',
+        cardFrontText: 'Objects',
         cardBackText: 'const obj = {}',
         topicNumber: 2,
     },
@@ -39,13 +39,13 @@ export const secondSemesterTopicCards =
     },
     {
         cardURL: 'url_parameters',
-        cardFrontText: 'URL-parametre',
+        cardFrontText: 'URL Parameters',
         cardBackText: 'URLSearchParams()',
         topicNumber: 7
     },
     {
         cardURL: 'attributes',
-        cardFrontText: 'Attributter',
+        cardFrontText: 'Attributes',
         cardBackText: '.getAttribute()/.setAttribute()',
         topicNumber: 8
     },
