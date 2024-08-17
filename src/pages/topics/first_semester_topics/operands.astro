@@ -9,7 +9,7 @@ import DescriptionCardExampleLink from '../../../components/DescriptionCardExamp
 import TopicPageNavbar from '../../../components/TopicPageNavbar.astro'
 ---
 
-<Layout title="JS Cheat Sheet | Comparing operands">
+<Layout title="JS Cheat Sheet | Comparison operators">
     <TopicPageNavbar>
         <h1 class="logo">
             <span>JS</span> Cheat Sheet
@@ -18,15 +18,15 @@ import TopicPageNavbar from '../../../components/TopicPageNavbar.astro'
     <div class="container desc-container">
         <DescriptionCard class="card what-card">
             <div class="card what-card">
-                <DescriptionCardHeader headerText="Operatorer" />
+                <DescriptionCardHeader headerText="Operators" />
 
                 <DescriptionCardText>
-                    Operatorer bruges til at bestemme en værdi ud fra to eller flere tal. I programmering bruges de i langt de fleste tilfælde sammen med if-sætninger til at tjekke, om noget er sandt.
-                    Det kunne for eksempel være at tjekke, om et tal er lig med et andet.
-
+                    Operators are used to determine a value based on two or more numbers. In programming, they are almost always used together with if statements to check, if something is true.
+                    
+               
                     
                     <CodePreviewCard>
-                        <h4>De mest brugte operatorer er:</h4>
+                        <h4>Frequently used operators:</h4>
                         <ul>
                             <li>
                                 <span class="operand">&&</span> (and)
@@ -35,22 +35,22 @@ import TopicPageNavbar from '../../../components/TopicPageNavbar.astro'
                                 <span class="operand">||</span> (or)
                             </li>
                             <li>
-                                <span class="operand">&gt;</span> (større end)
+                                <span class="operand">&gt;</span> (greater than)
                             </li>
                             <li>
-                                <span class="operand">&lt;</span> (mindre end)
+                                <span class="operand">&lt;</span> (lesser than)
                             </li>
                             <li>
-                                <span class="operand">&lt;&equals;</span> (mindre end eller lig med)
+                                <span class="operand">&lt;&equals;</span> (lesser than or equal to)
                             </li>
                             <li>
-                                <span class="operand">&gt;&equals;</span> (større end eller lig med)
+                                <span class="operand">&gt;&equals;</span> (greater than or equal to)
                             </li>
                             <li>
-                                <span class="operand">&equals;</span> (lig med)
+                                <span class="operand">&equals;</span> (equals)
                             </li>
                             <li>
-                                <span class="operand">&equals;&equals;</span> (lig med samme værdi)
+                                <span class="operand">&equals;&equals;</span> (equals same value)
                             </li>
                         </ul>
                     </CodePreviewCard>
@@ -60,13 +60,10 @@ import TopicPageNavbar from '../../../components/TopicPageNavbar.astro'
 
         <DescriptionCard class="syntax-card">
             <div class="card syntax-card">
-                <DescriptionCardHeader headerText="Syntaks" />
+                <DescriptionCardHeader headerText="Syntax" />
 
                 <DescriptionCardText>
-                    Der er ikke som sådan en syntaks for operatorerne alene, da disse bare er symboler, der udfører en bestemt handling.
-                    
-                    De giver bedst mening at vise hver især i forbindelse med en if-sætning, hvilket I kan se eksempler på <DescriptionCardExampleLink linkText="her." href="https://codepen.io/Schweitz/pen/MWMaBOB" target="_blank" /> 
-                    
+                    There isn't really a syntax for the operators alone, since these are just symbols that perform an action. It makes most sense to show each in combination with an if sentence. Examples on these can be found <DescriptionCardExampleLink linkText="here." href="https://codepen.io/Schweitz/pen/MWMaBOB" target="_blank" />                    
                 </DescriptionCardText>
             </div>
         </DescriptionCard>

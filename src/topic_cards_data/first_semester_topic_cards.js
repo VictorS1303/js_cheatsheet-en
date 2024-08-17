@@ -45,7 +45,7 @@ export const firstSemesterTopicCards =
     },
     {
         cardURL: 'operands',
-        cardFrontText: 'Comparing operands',
+        cardFrontText: 'Comparison operators',
         cardBackText: '<, >, <=, >=, ||, &&, =, ==',
         topicNumber: 8
     },
