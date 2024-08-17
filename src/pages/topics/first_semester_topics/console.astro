@@ -19,35 +19,33 @@ import TopicPageNavbar from '../../../components/TopicPageNavbar.astro'
         <BackButton className="back-button" id="back_button" href="/first_semester/" buttonText="Til oversigt"/>    </TopicPageNavbar>    
     <div class="container desc-container">
         <DescriptionCard class="card what-card">
-            <DescriptionCardHeader headerText="Konsollen" />
+            <DescriptionCardHeader headerText="Console" />
 
             <DescriptionCardText>
-                Konsollen bruges til at finde fejl i koden ved at vise fejlmeddelelser og logge kode. Den åbnes i browseren ved at højreklikke og vælge "Inspicér" eller "Undersøg".
+                The console is being used to find bugs in the <span class="code">code</span> and to log <span class="code">code</span>. The console is opened in the browser by right-clicking and choose "Inspect".     
             </DescriptionCardText>
 
             
         </DescriptionCard>
 
         <DescriptionCard class="card syntax-card">
-            <DescriptionCardHeader headerText="Syntaks" />
+            <DescriptionCardHeader headerText="Syntax" />
 
-            <DescriptionCardText>
-                I konsollen skrives almindelig JavaScript med almindelig JavaScript-syntaks.
+                <DescriptionCardText>
+                    Regular JavaScript with standard syntax is being written in the console.
+                    To log to the console, you write <span class="object">console</span> followed by <span class="method">.log</span><span class="parentheses">()</span>.
 
-                For at logge til konsollen skrives <span class="object">console</span> efterfulgt af <span class="method">.log</span><span class="parentheses">()</span>
+                    Inside the parentheses, you write, what you wish to log. Is it text, you need to wrap it in <span class="quote">quotes</span>. Is is <span class="code">code</span>, you simply just write it directly inside the <span class="parentheses">parentheses</span>.
 
-                Inde i parenteserne skrives det, man vil logge.
-                Er det tekst, skal der <span class="quote">citationstegn</span> omkring. Er det kode, skriver man det bare direkte i <span class="parentheses">parenteserne</span>.
-
-                Se mere i eksemplet
-                <DownloadButton
-                    href="/zips/console-eksempel.zip"
-                    class="btn zip-file-download-btn"
-                    id="zip_file_download_btn"
-                    download="console-eksempel"
-                >
-                her.
-            </DownloadButton>
+                    For more in-depth, check out the example
+                    <DownloadButton
+                        href="/zips/console-eksempel.zip"
+                        class="btn zip-file-download-btn"
+                        id="zip_file_download_btn"
+                        download="console-eksempel"
+                    >
+                    her.
+                </DownloadButton>
             </DescriptionCardText>
         </DescriptionCard>
     </div>
