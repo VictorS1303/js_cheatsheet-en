@@ -2,7 +2,7 @@
 import ModalCloseButton from '../components/ModalCloseButton.astro'
 ---
 
-<div class="modal welcome-modal active">
+<div class="modal welcome-modal">
     <ModalCloseButton/>
 
     <img src="/welcome_modal_image/welcome_modal_image.webp" alt="welcome modal image">
@@ -119,13 +119,14 @@ import ModalCloseButton from '../components/ModalCloseButton.astro'
     const modalCloseButton = document.querySelector('.welcome-modal .modal-close-btn')
     const mainNav = document.getElementById('main_nav')
     const mobileMenuToggleButton = document.getElementById('mobile_menu_toggle_btn')
-    console.log(mobileMenuToggleButton)
     const socialsContainer = document.querySelector('.socials-container') as HTMLElement
 
-    window.addEventListener('load', () =>
-    {
-        openWelcomeModalAndOverlay()
-    })
+    /*
+      window.addEventListener('load', () =>
+      {
+         openWelcomeModalAndOverlay()
+      })
+    */
 
     modalCloseButton.addEventListener('click', closeWelcomeModalAndOverlay)
 
