@@ -21,11 +21,14 @@ import TopicPageNavbar from '../../../components/TopicPageNavbar.astro'
     <div class="container desc-container">
         <DescriptionCard class="card what-card">
             <div class="card what-card">
-                <DescriptionCardHeader class="what-header" headerText="Forhold" />
+                <DescriptionCardHeader class="what-header" headerText="Conditions" />
 
                 <DescriptionCardText>
-                    Forhold bruges til at tjekke, om et udsagn er enten sandt eller falsk.
-                    Forestil dig, at du kun har plads til 10 varer i din indkøbskurv. Hver gang du lægger en vare i kurven, tjekker du, om den er fyldt. Dette er først tilfældet, når du lægger den tiende vare i, hvorefter der ikke er plads til flere varer.                </DescriptionCardText>
+                    Conditions are used to check, if an expression is true of false.
+                    Imagine that you only have space for ten items in your basket.
+                    Each time you add an item to your basket, you check, if it's full.
+                    This is first true, when you add the tenth item, and there's no more space for any more items.
+                </DescriptionCardText>
             </div>
         </DescriptionCard>
 
@@ -33,18 +36,16 @@ import TopicPageNavbar from '../../../components/TopicPageNavbar.astro'
             <DescriptionCardHeader class="syntax-header" headerText="Syntaks" />
 
             <DescriptionCardText>
-                En <span class="keyword">if</span>-sætning starter med, at man skriver <span class="keyword">if</span> efterfulgt af et sæt <span class="parentheses">parenteser</span> indeholdende betingelsen.
-                Derefter kommer et sæt <span class="curly-brackets">tuborgparenteser</span>, inde i hvilken den kode, der skal køres, står.
-                
-                Der er mere til en <span class="keyword">if</span>-sætning, og det kan ses i eksemplet <DescriptionCardExampleLink href="https://codepen.io/Schweitz/pen/NWZxNNZ" linkText="her." target="_blank" />
+                An <span class="keyword">if</span> sentence starts with writing the word <span class="keyword">if</span> followed by a pair of <span class="parentheses">parentheses</span> containing <span class="condition">the condition</span>. After that comes a pair of <span class="curly-brackets">curly brackets</span>, inside which the <span class="code">code</span> to be run is.
+                There's more to this, which can be found in the example <DescriptionCardExampleLink href="https://codepen.io/Schweitz/pen/NWZxNNZ" linkText="her." target="_blank" />
             </DescriptionCardText>
 
             <div class="code-preview-container">
                 <CodePreviewCard>
                     <h3>
                         <pre>
-                            <span class="keyword">if</span> <span class="parentheses">(<span class="condition">forhold</span>)</span>  <span class="curly-brackets">&#123;</span>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="code preview-card-code">// Kode her</span>
+                            <span class="keyword">if</span> <span class="parentheses">(<span class="condition">condition</span>)</span>  <span class="curly-brackets">&#123;</span>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="code preview-card-code">// Code here</span>
                             <span class="curly-brackets">&#125;</span>
                         </pre>
                     </h3>
