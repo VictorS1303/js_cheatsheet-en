@@ -17,31 +17,31 @@ import TopicPageNavbar from '../../../components/TopicPageNavbar.astro'
         <BackButton className="back-button" id="back_button" href="/first_semester/" buttonText="Til oversigt"/>    </TopicPageNavbar> 
     <div class="container desc-container">
         <DescriptionCard class="card what-card">
-            <DescriptionCardHeader headerText="Lyd" />
+            <DescriptionCardHeader headerText="Sound" />
 
                 <DescriptionCardText>
-                        Der er rigtigt mange ting, man  kan ændre på, når det kommer til lyd, men dem, som man bruger på 1. semester, er følgende:
+                    There is a lot of things to change, when it comes to sound, but those used during 1<small>st</small> semester, are the following:
+                     Der er rigtigt mange ting, man kan ændre på, når det kommer til lyd, men dem, som man bruger på 1. semester, er følgende:
                         <span class="method">.play</span><span class="parentheses">(</span><span class="parentheses">)</span>, <span class="method">.pause</span><span class="parentheses">(</span><span class="parentheses">)</span>, <span class="property">.muted</span>, <span class="property">.volume</span>, <span class="property">.duration</span> og <span class="property">.currentTime</span>. 
                         Download et eksempel med dem alle
-                        
                         <DownloadButton
                             href="/zips/lyd-eksempel.zip"
                             class="btn zip-file-download-btn"
                             id="zip_file_download_btn"
                             download="lyd-eksempel"
-                        >
-                        her.
-                     </DownloadButton>
-            </DescriptionCardText>
+                          >
+                          here.
+                        </DownloadButton>
+                </DescriptionCardText>
 
             <CodePreviewCard>
                 <ul>
                     <li>
-                        <span>Afspil lyd:</span>
+                        <span>Play lyd:</span>
                         <span><span class="method">.play</span><span class="parentheses">()</span></span>
                     </li>
                     <li>
-                        <span>Paus lyd:</span>
+                        <span>Pause lyd:</span>
                         <span><span class="method">.pause</span><span class="parentheses">()</span></span>
                     </li>
                     <li>
@@ -49,15 +49,15 @@ import TopicPageNavbar from '../../../components/TopicPageNavbar.astro'
                         <span><span class="property">.muted</span></span>
                     </li>
                     <li>
-                        <span>Volumen:</span>
+                        <span>Volume:</span>
                         <span><span class="property">.volume</span></span>
                     </li>
                     <li>
-                        <span>Lydens længde:</span>
+                        <span>Sound length:</span>
                         <span><span class="property">.duration</span></span>
                     </li>
                     <li>
-                        <span>Tid i lydfilen:</span>
+                        <span>Tid in sound file:</span>
                         <span><span class="property">.currentTime</span></span>
                     </li>
                 </ul>
@@ -66,11 +66,11 @@ import TopicPageNavbar from '../../../components/TopicPageNavbar.astro'
 
         <DescriptionCard>
             <div class="card syntax-card">
-                <DescriptionCardHeader headerText="Syntaks" />
+                <DescriptionCardHeader headerText="Syntax" />
                 
                 <DescriptionCardText>
-                    For at kunne bruge nogle af de ting, der er, når det kommer til lyd, skal man først have sit <span class="element">audio</span>-element hentet ind i sin JavaScript som en <span class="name">variabel</span>.
-                    Derefter kan man så begynde at bruge nogle af de ting, der er, når det kommer til at arbejde med lyd.
+                    To be able to use some of the stuff available, when it comes to sound, you first need your <span class="element">audio</span> element brought into the JavaScript as a <span class="name">variable</span>.
+                    Thereafter, you can being to use some of the stuff available, when it comes to dealing with sound.
                 </DescriptionCardText>
             </div>
 
