@@ -14,27 +14,27 @@ import TopicPageNavbar from '../../../components/TopicPageNavbar.astro'
         <h1 class="logo">
             <span>JS</span> Cheat Sheet
         </h1>
-        <BackButton className="back-button" id="back_button" href="/first_semester/" buttonText="Til oversigt"/>    </TopicPageNavbar> 
+        <BackButton className="back-button" id="back_button" href="/first_semester/" buttonText="Til oversigt"/>
+    </TopicPageNavbar> 
     <div class="container desc-container">
         <DescriptionCard class="card what-card">
             <div class="card what-card">
-                <DescriptionCardHeader class="what-header" headerText="Timerfunktioner" />
+                <DescriptionCardHeader class="what-header" headerText="Timer functions" />
 
                 <DescriptionCardText>
-                    Timers bruges til at køre kode efter et bestemt tidsrum eller med faste intervaller. De mest anvendte <span class="method">metoder</span> er <span class="method">setTimeout</span> og <span class="method">setInterval</span>.
-                    <span class="method">setTimeout</span> kører kode efter et bestemt tidsrum, mens <span class="method">setInterval</span> kører kode, hver gang det givne interval er gået.
+                    Timers are used to run code after a delay or at regular intervals. The most common methods are <span class="method">.setTimeout</span> and <span class="method">.setInterval</span>. <span class="method">.setTimeout</span> runs <span class="code">code</span> once after a certain time, while <span class="method">.setInterval</span> keeps running the <span class="code">code</span> at set intervals.
                 </DescriptionCardText>
             </div>
         </DescriptionCard>
 
         <DescriptionCard class="card syntax-card">
             <div class="card syntax-card">
-                <DescriptionCardHeader class="syntax-header" headerText="Syntaks" />
+                <DescriptionCardHeader class="syntax-header" headerText="Syntax" />
 
                 <DescriptionCardText>
-                    Syntaksen for <span class="method">setTimeout</span> og <span class="method">setInterval</span> er ens.
+                    The syntax for writing <span class="method">.setTimeout</span> and <span class="method">.setInterval</span> is identical. 
 
-                    Først skrives <span class="name">funktionsnavnet</span> (<span class="method">setInterval</span> eller <span class="method">setTimeout</span>). Dernæst kommer et sæt <span class="parentheses">parenteser</span>, inde i hvilke man skriver <span class="keyword">function</span> efterfulgt af et sæt <span class="parentheses">parenteser</span> og <span class="curly-brackets">tuborgparenteser</span>, inde i hvilke <span class="code">koden</span>, der skal køres, står. Se eksempler <DescriptionCardExampleLink href="https://codepen.io/Schweitz/pen/LYKpZyP" linkText="her." target="_blank"/>
+                    First, you write the <span class="name">name of the function</span> (<span class="method">setInterval</span> or <span class="method">setTimeout</span>). Thereafter comes a pair of <span class="parentheses">parentheses</span>, within which you write <span class="keyword">function</span> followed by a pair of <span class="parentheses">parentheses</span> and <span class="curly-brackets">curly brackets</span>, inside which the <span class="code">code</span> to be run is. See the examples 
                 </DescriptionCardText>
             </div>
             <CodePreviewCard>
@@ -64,13 +64,13 @@ import TopicPageNavbar from '../../../components/TopicPageNavbar.astro'
 
     .container.desc-container
     {
-        height: 80dvh;
+        height: auto;
     }
     @media screen and (max-width: 1500px)
     {
         .container.desc-container
         {
-            height: 400px;
+            /* height: 400px; */
             overflow-x: scroll;
         }
     }
