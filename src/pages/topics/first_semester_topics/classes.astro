@@ -20,10 +20,10 @@ import TopicPageNavbar from '../../../components/TopicPageNavbar.astro'
     <div class="container desc-container">
         <DescriptionCard class="card what-card">
             <div class="card what-card">
-                <DescriptionCardHeader class="what-header" headerText="Klassemanipulation"/>
+                <DescriptionCardHeader class="what-header" headerText="Class manipulation"/>
 
                 <DescriptionCardText>
-                    Class manipulation is all about adding or removing <span class="class">classes</span> from an <span class="element">element</span>. Example given, when you open a mobile menu by pressing the three lines, a <span class="class">class</span> is being added that controls the display of the menu. The most important <span class="method">methods</span> for class manipulation are <span class="method">.add<span class="parentheses">()</span></span>, <span class="method">.remove<span class="parentheses">()</span></span>, and <span class="method">.toggle<span class="parentheses">()</span></span>. Examples on these methods can be found <DescriptionCardExampleLink href="https://codepen.io/Schweitz/pen/GRbpZeg" linkText="here." target="_blank"/>
+                    Class manipulation is all about adding or removing <span class="class">classes</span> from an <span class="element">element</span>. Example given, when you open a mobile menu by pressing the three lines, a <span class="class">class</span> is being added that controls the display of the menu. The most important <span class="method">methods</span> for class manipulation are <span class="method">.add<span class="parentheses">()</span></span>, <span class="method">.remove<span class="parentheses">()</span></span>, and <span class="method">.toggle<span class="parentheses">()</span></span>. Examples on these <span class="method">methods</span> can be found <DescriptionCardExampleLink href="https://codepen.io/Schweitz/pen/GRbpZeg" linkText="here." target="_blank"/>
                 </DescriptionCardText>
             </div>
         </DescriptionCard>
@@ -33,17 +33,17 @@ import TopicPageNavbar from '../../../components/TopicPageNavbar.astro'
                 <DescriptionCardHeader class="syntax-header" headerText="Syntax" />
 
                 <DescriptionCardText>
-                    Da disse metoder er som <span class="event-type">eventlisters</span>, er syntaksen den samme.
-                    Først kommer <span class="name">variabelnavnet</span> efterfulgt af <span class="property">.classList</span>. Derefter et punktum og det <span class="method">metodenavn</span>, du ønsker at bruge.
-                    Indeni <span class="parentheses">parenteserne</span> skrives et sæt <span class="quote">citationstegn</span> med navnet på den <span class="class">klasse</span>, der skal manipuleres med.
+                    Since these <span class="method">methods</span> are similar to <span class="event-type">eventlisteners</span>, the syntax is the same. First comes the <span class="name">name of the variable</span> followed by <span class="property">.classList</span>. After this comes a period and then the <span class="name">name</span> of the <span class="method">method</span> you wish to use. Inside the <span class="parentheses">parentheses</span> comes a pair of <span class="quote">quotes</span> containing the name of the <span class="class">class</span>, with which you wish to manipulate.
                 </DescriptionCardText>
             </div>
 
             <CodePreviewCard>
                 <h3>
                     <pre>
+
                         <span class="name">variabelNavn</span><span class="method">.metodeNavn
-                            <span class="parentheses">(</span><span class="quote">'</span><span class="event-type">klassenavn</span><span class="quote">'</span><span class="parentheses">)</span></span>
+                            <span class="parentheses">(</span><span class="quote">'</span><span class="event-type">klassenavn</span><span class="quote">'</span><span class="parentheses">)</span>
+                        </span>
                     </pre>
                 </h3>
             </CodePreviewCard>
