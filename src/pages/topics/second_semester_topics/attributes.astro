@@ -20,10 +20,6 @@ import DescriptionCardExampleLink from '../../../components/DescriptionCardExamp
                     <span class="attribute">Attributter</span>, such as <span class="attribute">class</span> and <span class="attribute">id</span>, helps make elements more specific and can either be added to the <span class="element">element</span> directly in HTML or with JavaScript using the <span class="method">method</span> <span class="method">.setAttribute<span class="parentheses">()</span></span> to set an attribute or <span class="method">.getAttribute<span class="parentheses">()</span></span> to get the <span class="attribute">attribute</span>.
 
                     See in-depth explanations and examples <DescriptionCardExampleLink href="https://codepen.io/Schweitz/pen/bGPgPeK" linkText="here." target="_blank"/>
-
-
-                    <!-- <span class="attribute">Attributer</span>, som for eksempel <span class="attribute">klasse</span> og <span class="attribute">id</span>, er med til at gøre elementer mere specifikke, og de kan enten sættes på direkte i HTML'en eller i JavaScript med metoden <span class="method">.setAttribute<span/><span class="parentheses">()</span> og <span class="method">.getAttribute</span><span class="parentheses">()</span> til at få fat på attributten.
-                    Der kan findes uddybende forklaringer og eksempler <DescriptionCardExampleLink href="https://codepen.io/Schweitz/pen/bGPgPeK" linkText="her." target="_blank"/> -->
                 </DescriptionCardText>
             </div>
         </DescriptionCard>
@@ -35,17 +31,13 @@ import DescriptionCardExampleLink from '../../../components/DescriptionCardExamp
                 <DescriptionCardText>
                     <span class="method">.setAttribute<span class="parentheses">()</span></span> is used on the <span class="variable">variable</span> referring to the wished <span class="element">element</span>. The <span class="method">method</span> takes to <span class="parameter">parameters</span> in <span class="quote">quotes</span>; first the <span class="name">name</span> of the <span class="attribute">attribute</span> and then its value.
                     
-                    <span class="method">.getAttribute<span class="parentheses">()</span></span> takes only one <span class="parameter">parameter</span>, namely the <span class="name">name</span> of the <span class="attribute">attribute</span>, you wish to get from the <span class="element">element</span>.  
-                    
-                    <!-- Syntaxen for <span class="method">.setAttribute</span><span class="parentheses">()</span>  anvendes på den <span class="name">variabel</span>, der refererer til det ønskede <span class="element">element</span>. <span class="method">Metoden</span> kræver to <span class="parameters">parametre</span> i <span class="quote">citationstegn</span>: først <span class="name">navnet</span> på <span class="attribute">attributten</span> og derefter dens værdi.
-                    <span class="method">.getAttribute</span><span class="parentheses">()</span> kræver kun ét <span class="parameter">parameter</span>, som er <span class="name">navnet</span> på den <span class="attribute">attribut</span>, du vil hente fra <span class="element">elementet</span>. -->
+                    <span class="method">.getAttribute<span class="parentheses">()</span></span> takes only one <span class="parameter">parameter</span>, namely the <span class="name">name</span> of the <span class="attribute">attribute</span>, you wish to get from the <span class="element">element</span>.
                 </DescriptionCardText>
             </div>
 
             <CodePreviewCard>
                 <h3>
                     <pre>
-  
   <span class="keyword">const</span> <span class="name">div</span> <span class="equal">=</span> <span class="object">document</span><span class="method">.querySelector</span><span class="parentheses">(</span><span class="quote">'</span><span class="element">div</span><span class="quote">'</span><span class="parentheses">)</span>
 
   <span class="name">div</span><span class="method">.setAttribute</span><span class="parentheses">(</span><span class="quote">'</span><span class="attribute">class</span><span class="quote">'</span>, <span class="quote">'</span><span class="value">square</span><span class="quote">'</span><span class="parentheses">)</span>
