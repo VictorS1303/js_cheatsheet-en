@@ -14,10 +14,10 @@ import DownloadButton from '../../../components/DownloadButton.astro'
     <div class="container desc-container">
         <DescriptionCard class="card what-card">
             <div class="card what-card">
-                <DescriptionCardHeader class="what-header" headerText="URL-parametre"/>
+                <DescriptionCardHeader class="what-header" headerText="URL Parameters"/>
 
                 <DescriptionCardText>
-                    URL-parametre bruges til at sende data fra en side til en anden via URL'en, hvilket forbedrer brugeroplevelsen. For eksempel i en webshop kan URL-parametre overføre valgte varer fra produktvisning til kurv og videre til betalingssiden.
+                    URL parameters are being used to send data from one page to another via the <span class="url">URL</span>, which heightens the user experience. In example, a web shop uses this method to send selected products from the product view to the basket and again to the payment site.
                 </DescriptionCardText>
             </div>
         </DescriptionCard>
@@ -27,11 +27,15 @@ import DownloadButton from '../../../components/DownloadButton.astro'
                 <DescriptionCardHeader class="syntax-header" headerText="Syntax" />
 
                 <DescriptionCardText>
-                    Først har du <span class="url">basis-URL'en</span>, som slutter med ".html". Herefter tilføjes et spørgsmålstegn, der markerer starten på det første <span class="parameter">parameter</span>, efterfulgt af <span class="name">parameternavnet</span>, et <span class="equal">lighedstegn</span>, og <span class="parameter">parameterets</span> værdi. Syntaxen er striks, og eksemplet <DownloadButton
+                    You first have the <span class="url">base URL</span> ending with ".html". Then comes a question mark, indicating that the first <span class="parameter">parameter</span> begins. This is followed by the <span class="name">parameter name</span>, and <span class="equal">equal sign</span> and the <span class="value">parameter value</span>. Since the syntax is strict, this example
+                    <DownloadButton
                         href="/zips/url_parametre-eksempel.zip"
                         class="btn zip-file-download-btn"
                         id="zip_file_download_btn"
-                        download="url_parametre-eksempel">her</DownloadButton> forklarer de nødvendige metoder til at sende og modtage parametre i detaljer.
+                        download="url_parametre-eksempel">
+                        here
+                    </DownloadButton>
+                    explains in details the required <span class="method">methods</span> to send and receive parameters.
                 </DescriptionCardText>
             </div>
 
