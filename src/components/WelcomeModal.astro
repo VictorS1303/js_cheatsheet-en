@@ -121,12 +121,12 @@ import ModalCloseButton from '../components/ModalCloseButton.astro'
     const mobileMenuToggleButton = document.getElementById('mobile_menu_toggle_btn')
     const socialsContainer = document.querySelector('.socials-container') as HTMLElement
 
-    /*
-      window.addEventListener('load', () =>
-      {
-         openWelcomeModalAndOverlay()
-      })
-    */
+    
+    window.addEventListener('load', () =>
+    {
+       openWelcomeModalAndOverlay()
+    })
+
 
     modalCloseButton.addEventListener('click', closeWelcomeModalAndOverlay)
 
