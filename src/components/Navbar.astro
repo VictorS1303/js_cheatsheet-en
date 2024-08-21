@@ -32,7 +32,7 @@ const currentPage = new URL(Astro.request.url).pathname
         color: #fff;
         font-size: 25px;
         cursor: pointer;
-        z-index: 50;
+        z-index: 999;
         transition: color .15s ease-in, right .4s ease-in;
     }
 
@@ -170,6 +170,8 @@ const currentPage = new URL(Astro.request.url).pathname
 
 <script>
     const mobileMenuToggleBtn = document.querySelector('#mobile_menu_toggle_btn')
+    const overlay = document.getElementById('overlay')
+    const mobileMenuToggleButton = document.getElementById('mobile_menu_toggle_btn')
     const mainNav = document.querySelector('#main_nav')
 
     mobileMenuToggleBtn.addEventListener('click', toggleMobileMenu)
@@ -178,8 +180,13 @@ const currentPage = new URL(Astro.request.url).pathname
     {
         mobileMenuToggleBtn.classList.toggle('active')
         mainNav.classList.toggle('active')
-
+        overlay.classList.toggle('active')
         updateMobileMenuToggleIcon()
+
+        if(mainNav.classList.contains('active'))
+        {
+            enable()
+        }        
     }
 
     function updateMobileMenuToggleIcon()
@@ -194,5 +201,10 @@ const currentPage = new URL(Astro.request.url).pathname
             mobileMenuToggleBtn.classList.add('fa-bars')
             mobileMenuToggleBtn.classList.remove('fa-times')
         }
+    }
+
+    function enable()
+    {
+        mobileMenuToggleButton.style.pointerEvents = 'all'
     }
 </script>
